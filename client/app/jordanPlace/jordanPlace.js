@@ -78,5 +78,4 @@ var upload = function (file) {//upload an image to the game
         }
       }
     }
-  
   });

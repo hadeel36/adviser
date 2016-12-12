@@ -47,6 +47,42 @@ angular.module('adviser.services', [])
 
 
   })
+.factory('Destination', function($http,Upload){
+
+  var addDestination = function (destination) {
+    return $http({
+      method: 'POST',
+      url: '/api/addDestination',
+      data: destination
+    });
+  };
+
+  var uploadPicture = function (file) {//upload an image to the game
+    return Upload.upload({
+          url: '/api/upload', //webAPI exposed to upload the file
+          data:{file:file} //pass file as data, should be user ng-model
+      }).then(function (resp) {
+          return resp;
+    });
+  };
+
+  var getAllDestination = function () {
+    return $http({
+      method: 'GET',
+      url: '/api/destination'
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
+  return{
+    addDestination: addDestination,
+    uploadPicture: uploadPicture,
+    getAllDestination: getAllDestination
+  };
+
+})
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
   // it is responsible for authenticating our user
