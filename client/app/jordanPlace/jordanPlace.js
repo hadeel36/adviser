@@ -17,6 +17,5 @@ angular.module('adviser.jordanPlace', [])
   };
   
   inite();
-
   });
 

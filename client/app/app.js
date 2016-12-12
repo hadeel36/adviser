@@ -2,16 +2,21 @@ angular.module('adviser', [
   'adviser.services',
   'adviser.jordan',
   'adviser.jordanPlace',
+
   'adviser.cms',
   'adviser.jordanPlaceCms',
+
+  'adviser.destinationCms',
+  'adviser.destination',
+
   'ngFileUpload',
   'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
   .when('/jordan', {
-      templateUrl: 'app/jordan/jordan.html',
-      controller: 'jordanController'
+    templateUrl: 'app/jordan/jordan.html',
+    controller: 'jordanController'
     })
   .when('/jordanPlace', {
       templateUrl: 'app/jordanPlace/jordanPlace.html',
@@ -32,12 +37,16 @@ angular.module('adviser', [
   .when('/cms/jordanPlaces', {
       templateUrl: 'app/cms/jordanPlaceCms.html',
       controller: 'jordanPlaceCmsController'
-    });
-
-
-
-
-
+    })
+  .when('/addDestination', {
+    templateUrl: 'app/cms/destination/distinationCms.html',
+    controller: 'destinationCmsController'
+  })
+  .when('/destinations', {
+    templateUrl: 'app/destination/destination.html',
+    controller: 'destinationController'
+  })
+  ;
 
     
     // We add our $httpInterceptor into the array
