@@ -2,8 +2,11 @@ angular.module('adviser', [
   'adviser.services',
   'adviser.jordan',
   'adviser.jordanPlace',
+<<<<<<< HEAD
   'adviser.cms',
   'adviser.jordanPlaceCms',
+=======
+>>>>>>> first update
   'ngFileUpload',
   'ngRoute'
 ])
@@ -16,6 +19,7 @@ angular.module('adviser', [
   .when('/jordanPlace', {
       templateUrl: 'app/jordanPlace/jordanPlace.html',
       controller: 'jordanPlaceController'
+<<<<<<< HEAD
     })
   .when('/jordan/:id', {
       templateUrl: 'app/jordanPlace/jordanPlace.html',
@@ -32,6 +36,8 @@ angular.module('adviser', [
   .when('/cms/jordanPlaces', {
       templateUrl: 'app/cms/jordanPlaceCms.html',
       controller: 'jordanPlaceCmsController'
+=======
+>>>>>>> first update
     });
 
 
