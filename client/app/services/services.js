@@ -1,16 +1,63 @@
 angular.module('adviser.services', [])
 
-.factory('Countries', function ($http) {
- 
+.factory('Jordan', function ($http, Upload) {
+ var getJordanInfo = function () {
+    return $http({
+      method: 'GET',
+      url: '/api/jordan'
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
+  var addPlace = function (place) {
+    return $http({
+      method: 'POST',
+      url: '/api/jordanPlace',
+      data: place
+    });
+  };
+
+  var getPlaceInfo = function (id) {
+    return $http({
+      method: 'GET',
+      url: '/api/jordanPlace/placeInfo/'+id
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
+  var uploadPicture = function (file) {//upload an image to the game
+    return Upload.upload({
+          url: '/api/upload', //webAPI exposed to upload the file
+          data:{file:file} //pass file as data, should be user ng-model
+      }).then(function (resp) {
+          return resp;
+    });
+  };
+
+  var getPlaces = function () {
+    return $http({
+      method: 'GET',
+      url: '/api/jordanPlace/allPlaces'
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
 
 
 
+  return {
+    getJordanInfo: getJordanInfo,
+    addPlace : addPlace,
+    getPlaceInfo : getPlaceInfo,
+    uploadPicture : uploadPicture,
+    getPlaces : getPlaces  
 
-
-
-
-
-
+  };
 
 
   })

@@ -1,8 +1,38 @@
 angular.module('adviser', [
+  'adviser.services',
+  'adviser.jordan',
+  'adviser.jordanPlace',
+  'adviser.cms',
+  'adviser.jordanPlaceCms',
+  'ngFileUpload',
+  'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
-    
+  .when('/jordan', {
+      templateUrl: 'app/jordan/jordan.html',
+      controller: 'jordanController'
+    })
+  .when('/jordanPlace', {
+      templateUrl: 'app/jordanPlace/jordanPlace.html',
+      controller: 'jordanPlaceController'
+    })
+  .when('/jordan/:id', {
+      templateUrl: 'app/jordanPlace/jordanPlace.html',
+      controller: 'jordanPlaceController'
+    })
+  .when('/cms', {
+      templateUrl: 'app/cms/login.html',
+      controller: 'cmsController'
+    })
+  .when('/cms/dashboard', {
+      templateUrl: 'app/cms/table.html'
+      // controller: 'tableController'
+    })
+  .when('/cms/jordanPlaces', {
+      templateUrl: 'app/cms/jordanPlaceCms.html',
+      controller: 'jordanPlaceCmsController'
+    });
 
 
 

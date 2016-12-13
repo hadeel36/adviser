@@ -1,0 +1,19 @@
+<div>
+hello
+<div ng-repeat="jordan in data">
+<img src="../../images/{{jordan.mainPhoto}}">
+<img src="../../images/{{jordan.mapPhoto}}">
+<div>
+{{jordan.description}}
+</div>
+
+</div>
+
+<div ng-repeat="place in places">
+<a href="/#/jordan/{{place._id}}">
+{{place.placeName}}
+<img src="{{place.mainPhoto}}">
+   
+</div>
+
+</div>
