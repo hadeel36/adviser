@@ -2,13 +2,10 @@ angular.module('adviser', [
   'adviser.services',
   'adviser.jordan',
   'adviser.jordanPlace',
-
   'adviser.cms',
   'adviser.jordanPlaceCms',
-
   'adviser.destinationCms',
   'adviser.destination',
-
   'ngFileUpload',
   'ngRoute'
 ])
@@ -47,7 +44,6 @@ angular.module('adviser', [
     controller: 'destinationController'
   })
   ;
-
     
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls
