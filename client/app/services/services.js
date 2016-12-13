@@ -49,12 +49,14 @@ angular.module('adviser.services', [])
   };
 
 
+
   return {
     getJordanInfo: getJordanInfo,
     addPlace : addPlace,
     getPlaceInfo : getPlaceInfo,
     uploadPicture : uploadPicture,
     getPlaces : getPlaces  
+
   };
 
 
