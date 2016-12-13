@@ -13,16 +13,10 @@ module.exports = {
 	jordanInfo: function (req, res, next) {
 		Jordan.find({})
 		.exec(function (err, jordan) {
-<<<<<<< HEAD
 			repsonseHandler(err, req, res, {status: 201, returnObj: jordan},next);
 		});
 	},
-=======
-			repsonseHandler(err, req, res, {status: 201, returnObj: jordan});
-		});
-	},
 
->>>>>>> first update
 	createJordan: function (req, res, next) {
 		var description = req.body.description;
 		var mainPhoto = req.body.mainPhoto;
