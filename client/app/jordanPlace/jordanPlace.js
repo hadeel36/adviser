@@ -1,3 +1,4 @@
+
 angular.module('adviser.jordanPlace', [])
 .controller('jordanPlaceController', function ($scope, $route, $window, $routeParams, Jordan) {
   // Your code here
@@ -16,5 +17,5 @@ angular.module('adviser.jordanPlace', [])
   };
   
   inite();
-
   });
+

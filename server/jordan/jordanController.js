@@ -16,6 +16,7 @@ module.exports = {
 			repsonseHandler(err, req, res, {status: 201, returnObj: jordan},next);
 		});
 	},
+
 	createJordan: function (req, res, next) {
 		var description = req.body.description;
 		var mainPhoto = req.body.mainPhoto;
