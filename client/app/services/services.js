@@ -19,10 +19,10 @@ angular.module('adviser.services', [])
     });
   };
 
-  var getPlaceInfo = function () {
+  var getPlaceInfo = function (id) {
     return $http({
       method: 'GET',
-      url: '/api/jordanPlace'
+      url: '/api/jordanPlace/placeInfo/'+id
     })
     .then(function (resp) {
       return resp.data;
@@ -38,11 +38,23 @@ angular.module('adviser.services', [])
     });
   };
 
+  var getPlaces = function () {
+    return $http({
+      method: 'GET',
+      url: '/api/jordanPlace/allPlaces'
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
+
   return {
     getJordanInfo: getJordanInfo,
     addPlace : addPlace,
     getPlaceInfo : getPlaceInfo,
-    uploadPicture : uploadPicture  
+    uploadPicture : uploadPicture,
+    getPlaces : getPlaces  
   };
 
 

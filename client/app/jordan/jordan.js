@@ -1,6 +1,6 @@
 angular.module('adviser.jordan', [])
 
-.controller('jordanController', function ($scope, Jordan) {
+.controller('jordanController', function ($scope, Jordan, $location) {
   // Your code here
 
   $scope.data = {};
@@ -16,5 +16,18 @@ angular.module('adviser.jordan', [])
       });
   };
 
+  var initePlaces = function () {
+    Jordan.getPlaces()
+      .then(function (places) {
+        $scope.places = places;
+        console.log(places);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  };
+  
+
   inite();
+  initePlaces();
   });

@@ -8,8 +8,9 @@ module.exports = function (app, express) {
 app.get('/api/jordan',jordanController.jordanInfo);
 app.post('/api/jordan',jordanController.createJordan);
 // jordanPlace api
-app.get('/api/jordanPlace',jordanPlaceController.placeInfo);
+app.get('/api/jordanPlace/placeInfo/:id',jordanPlaceController.placeInfo);
 app.post('/api/jordanPlace',jordanPlaceController.createNewJordanPlace);
+app.get('/api/jordanPlace/allPlaces',jordanPlaceController.getAllPlaces);
 
 // upload an image 
 app.post('/api/upload',utils.uploadImg)
