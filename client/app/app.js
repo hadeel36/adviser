@@ -39,7 +39,7 @@ angular.module('adviser', [
     templateUrl: 'app/cms/destination/distinationCms.html',
     controller: 'destinationCmsController'
   })
-  .when('/destinations', {
+  .when('/allDestinations', {
     templateUrl: 'app/destination/destination.html',
     controller: 'destinationController'
   })

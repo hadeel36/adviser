@@ -21,3 +21,11 @@ li a:hover{
 background-color : #555;
 color:white;
 }
+.nav-tabs > li > a{
+    cursor:pointer;
+}
+
+.nav-tabs li a span:hover {
+    color: red;
+    cursor:pointer;
+}
