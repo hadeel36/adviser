@@ -1,4 +1,4 @@
-ul{
+/*ul{
 list-style-type:none;
 padding:0px;
 margin:0px;
@@ -21,3 +21,170 @@ li a:hover{
 background-color : #555;
 color:white;
 }
+.padd5{
+	padding: 5px 5px 5px 5px;
+	text-align: left;
+}
+.tableCms{
+	margin: 20px 20px 20px ;
+	padding: 5px 5px 5px 5px;
+}*/
+
+
+
+/*/////// cms style*/
+
+
+#cm-nav li a.arrow {background-image:url('../../images/ArrowButton.png');}
+
+ul#cm-nav ,
+ul#cm-nav ul {
+ border-bottom: black 1px solid;
+ list-style-type: none;
+ margin: 0px;
+ list-style-image: none;
+ border-right: black 1px solid;
+ padding: 0px;
+ width:240px;
+}
+
+ul#cm-nav li {
+ position: relative;
+ list-style-type: none;
+ margin: auto;
+ list-style-image: none;
+ padding: 0px;
+
+}
+
+ul#cm-nav li li {
+ width: auto;
+ float: none
+}
+
+#cm-nav a {
+ text-align: left;
+ border-left: black 1px solid;
+ display: block;
+ font-family: verdana;
+ white-space: nowrap;
+ /*background: #d6d5f0;*/
+ background-image:url('../../images/Button.png');
+ color: black;
+ font-size: 16px;
+ font-family:Verdana;
+ font-weight:bold;
+ border-top: black 1px solid;
+ text-decoration: none;
+ text-align:center;
+ padding-top:15px;
+ height:50px;
+}
+
+#cm-nav a:focus {
+ outline-style: none;
+ outline-color: invert;
+ outline-width: medium
+}
+
+#cm-nav a.no-click {cursor: default}
+
+#cm-nav > li > a ,
+#cm-nav > li > a.arrow {padding-right: 4px}
+
+.arrow-pad#cm-nav > li > a ,
+#cm-nav ul.arrow-pad > li > a {padding-right: 11px}
+
+#cm-nav li a.arrow ,
+#cm-nav > li > a.arrow {
+ background-repeat: no-repeat;
+ background-position: right 50%
+}
+
+#cm-nav li:hover > a {
+ /*background-image:url('../images/Button.png');*/
+ color: white
+}
+
+#cm-nav li ul ,
+#cm-nav li:hover ul ul ,
+#cm-nav li:hover ul ul ul ,
+#cm-nav li:hover ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ,
+#cm-nav li:hover ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul {
+ z-index: 999;
+ position: absolute;
+ display: none
+}
+
+#cm-nav li:hover ul ,
+#cm-nav li li:hover ul ,
+#cm-nav li li li:hover ul ,
+#cm-nav li li li li:hover ul ,
+#cm-nav li li li li li:hover ul ,
+#cm-nav li li li li li li:hover ul ,
+#cm-nav li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li li li li li li li li li li:hover ul ,
+#cm-nav li li li li li li li li li li li li li li li li li li li li li:hover ul {
+ display: block;
+ margin-left: 100%
+}
+
+#cm-nav ul ul {margin-left: 0px}
+
+#cm-nav ul {
+ top: 0px;
+ left: 0px
+}
+
+#cm-nav a {font-variant: normal}
+
+.MultiFile-wrap a ,
+.MultiFile-wrap  span 
+{
+	color:#000000;
+}
+.PanelUploader
+{
+	color:#000000;
+}
+
+.PanelUploader div 
+{
+	color:#000000;
+}
+
+.paddBot11 {
+    padding-bottom: 11px;
+}
+.paddRt14 {
+    padding-right: 14px;
+}
+/*///end css for cms */
