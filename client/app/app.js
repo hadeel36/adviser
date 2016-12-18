@@ -6,7 +6,10 @@ angular.module('adviser', [
   'adviser.jordanPlaceCms',
   'adviser.destinationCms',
   'adviser.destination',
+  'adviser.addJordanPlaceCms',
+  'adviser.addDestinationCms',
   'ngFileUpload',
+  'ui.tinymce',
   'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {
@@ -28,22 +31,29 @@ angular.module('adviser', [
       controller: 'cmsController'
     })
   .when('/cms/dashboard', {
-      templateUrl: 'app/cms/table.html'
+      templateUrl: 'app/cms/dashboard.html'
       // controller: 'tableController'
     })
   .when('/cms/jordanPlaces', {
       templateUrl: 'app/cms/jordanPlaceCms.html',
       controller: 'jordanPlaceCmsController'
     })
-  .when('/addDestination', {
-    templateUrl: 'app/cms/destination/distinationCms.html',
+  .when('/cms/addPlace', {
+      templateUrl: 'app/cms/addJordanPlaceCms.html',
+      controller: 'addJordanPlaceCmsController'
+    })
+  .when('/cms/destinations', {
+    templateUrl: 'app/cms/destinationCms.html',
     controller: 'destinationCmsController'
+  })
+  .when('/cms/addDestination', {
+    templateUrl: 'app/cms/addDestinationCms.html',
+    controller: 'addDestinationCmsController'
   })
   .when('/allDestinations', {
     templateUrl: 'app/destination/destination.html',
     controller: 'destinationController'
-  })
-  ;
+  });
     
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls
