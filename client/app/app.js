@@ -43,6 +43,9 @@ angular.module('adviser', [
     templateUrl: 'app/destination/destination.html',
     controller: 'destinationController'
   })
+  .when('/Home', {
+    templateUrl: 'app/main/main.html'
+  })
   ;
     
     // We add our $httpInterceptor into the array
