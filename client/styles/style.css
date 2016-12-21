@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*/////// cms style*/
 #cm-nav li a.arrow {background-image:url('../../images/ArrowButton.png');}
 
@@ -222,24 +221,11 @@ body {
     font: 400 15px/1.8 Lato, sans-serif;
     color: #777;
 }
-h4 {
+.footer-heading{
     margin: 10px 0 30px 0;
     letter-spacing: 10px;      
     font-size: 20px;
     color: #111;
-}
-.container {
-    padding: 170px 120px;
-}
-.person {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 80%;
-    height: 80%;
-    opacity: 0.7;
-}
-.person:hover {
-    border-color: #f1f1f1;
 }
 .carousel-inner img {
     width: 100%; /* Set width to 100% */
@@ -253,16 +239,16 @@ h4 {
     display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
 }
-.thumbnail {
+.home-img {
     padding: 0 0 15px 0;
     border: none;
     border-radius: 0;
 }
-.thumbnail p {
+.home-img p {
     margin-top: 15px;
     color: #555;
 }
-.btn {
+.more-detail {
     padding: 10px 20px;
     background-color: #333;
     color: #f1f1f1;
@@ -270,7 +256,7 @@ h4 {
     transition: .2s;
     margin: 340px;
 }
-.btn:hover, .btn:focus {
+.more-detail:hover, .more-detail:focus {
     border: 1px solid #333;
     background-color: #fff;
     color: #000;
@@ -312,7 +298,7 @@ footer a:hover {
   position: relative;
   top: 140px;
 }
-#myCarousel{
+.main-div{
     display: block;
     position: relative;
     top: 190px;
@@ -344,7 +330,7 @@ footer a:hover {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-.thumbnail:hover .overlay {
+.home-img:hover .overlay {
   opacity: 1;
 }
 .address{
@@ -364,6 +350,4 @@ footer a:hover {
  <img src="../images/dubai2.jpg" alt="dubi">
   <img src="../images/eygpt2.jpg" alt="egypt">
   <img src="../images/Jordan2.jpg" alt="jordan">*/
-.nav-tabs > li > a{
-    cursor:pointer;
 
