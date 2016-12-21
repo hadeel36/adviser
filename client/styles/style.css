@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*/////// cms style*/
 #cm-nav li a.arrow {background-image:url('../../images/ArrowButton.png');}
 
@@ -350,6 +351,7 @@ footer a:hover {
     list-style: none;
     list-style-type: none;
 }
+
 .address li{
     list-style: none;
     list-style-type: none;
@@ -362,3 +364,6 @@ footer a:hover {
  <img src="../images/dubai2.jpg" alt="dubi">
   <img src="../images/eygpt2.jpg" alt="egypt">
   <img src="../images/Jordan2.jpg" alt="jordan">*/
+.nav-tabs > li > a{
+    cursor:pointer;
+
