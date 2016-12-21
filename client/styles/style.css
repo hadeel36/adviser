@@ -16,6 +16,7 @@
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
+<<<<<<< HEAD
 .social {
     -webkit-transform: scale(0.8);
      /* Browser Variations: */
@@ -191,3 +192,13 @@ footer a:hover {
  <img src="../images/dubai2.jpg" alt="dubi">
   <img src="../images/eygpt2.jpg" alt="egypt">
   <img src="../images/Jordan2.jpg" alt="jordan">*/
+=======
+.nav-tabs > li > a{
+    cursor:pointer;
+}
+
+.nav-tabs li a span:hover {
+    color: red;
+    cursor:pointer;
+}
+>>>>>>> da1d0244f8dd49740caec44e1b51eaa2dbacbeab
