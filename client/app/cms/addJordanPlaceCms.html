@@ -9,9 +9,8 @@
             <td>
                 
                 <div>
-                    <script type="text/javascript">
+                   
 
-</script>
 
                     
               <img src="../../images/CMSLogo.png" width="1000" height="200" alt="">
@@ -43,39 +42,86 @@
                             <div>
                             
 <div style="margin-left: 200px;width:500px;">
-        <span id="ctl00_ContentPlaceHolder1_lblPageName" style="font-family:tahoma;font-size:18pt;">Jordan Places</span>
+        <span id="ctl00_ContentPlaceHolder1_lblPageName" style="font-family:tahoma;font-size:18pt;">Add Place</span>
 
-    </div>
-    <div style="margin:10px">
-        
-        <label>Place Name : </label><input type='text' ng-model='search' placeholder='filter' />
-        
-        <button class="btn btn-lg"><a href="/#/cms/addPlace"> Add Place</a></button>
-    </div>
+   
             
             <div style="width: 740px; margin-bottom: 20px;">
                 <div>
 
 </div>
+     </div>
             </div>
            <!--  table for our data  -->
-            <table cellspacing="2" cellpadding="5" rules="all" border="1" id="ctl00_ContentPlaceHolder1_gvData" style="background-color:#DEBA84;border-color:#DEBA84;border-width:1px;border-style:None;width:730px;">
-        <tbody><tr style="color:White;background-color:#A55129;font-weight:bold;">
-            <th scope="col">Action</th><th scope="col">ID</th><th scope="col">Place Name</th><th scope="col">Status</th>
-        </tr><tr ng-repeat="place in data | filter:search" style="color:#8C4510;background-color:#FFF7E7;" >
-            <td><input type="image" src="../../images/Edit.png" alt="Edit" ng-click="" style="border-width:0px;"></td><td>{{place._id}}</td><td>{{place.placeName}}</td><td>Active</td>
+    <table border="0" cellpadding="5" cellspacing="8">
+        <tr>
+            <th valign="top">Place Name:</th>
+            <td align="left" class="paddBot11">
+            <div class="col-lg-6"><input type="text" class="form-control" ng-model="placeName"/></div></td>
+            <td></td>
         </tr>
-        <tr align="center" style="color:#8C4510;">
-            <td colspan="6"><table border="0">
-                <tbody><tr>
-                    <td><input type="image" src="../../images/GridForward.png" alt="Next" onclick="" style="border-width:0px;"></td><td><input type="image" src="../../images/GridLast.png" alt="Last Page" onclick="" style="border-width:0px;"></td>
-                </tr>
-            </tbody></table></td>
-        </tr>
-    </tbody></table>
-        
+    <tr>
+        <th valign="top">Description:</th>
+        <td align="left" class="paddBot11"><textarea  ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea></td>
+        <!-- <button ng-click="getContent()">Get content</button> -->
+        <td></td>
+    </tr>
+    <tr>
+    <th valign="top">Main Image:</th>
+    <td>
+   <!-- <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
 
-   
+<tbody><tr><td colspan="2" class="paddRt14 paddBot11"> --><!-- <div  id="image_area">
+
+
+<div class="add-property-cont-left" style="position:relative;">
+
+<span class="loader"></span>
+ -->
+<!-- <div class="myLabel" id="bathroom_browse"> -->
+
+    <input type="file" ngf-select ng-model="file" 
+    name="file" 
+    ngf-pattern="'image/*'"
+    accept="image/*" 
+    ngf-max-size="0.3MB" 
+    ng-change="submit()"
+    />
+    <img style="width:100px;" ng-show="!!file" ngf-thumbnail="file"/><br>
+    <i ng-show="file.$error.maxSize">File too large 
+    {{file.size / 1000000|number:1}}MB: max 20M</i>
+    <p>{{progress}}</p>
+</td> <td></td></tr>
+
+<!-- </tbody></table> -->
+<!-- </td> -->
+   <!--  </tr> -->
+    <tr>
+        <th>Images:</th>
+        <td valign="top">
+          <button ngf-select="uploadFiles()" ng-model="files" ngf-multiple="true" accept="image/*">Select files</button>
+<br>Files:
+    <ul>
+        <li ng-repeat="f in files" style="font:smaller">
+            {{f.name}}
+        </li>
+    </ul>
+    <span class="progress" ng-show="progress1 >= 0">
+        <div style="width:{{progress1}}%" ng-bind="progress1 + '%'"></div>
+    </span>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th>&nbsp;</th>
+        <td valign="top">
+            <button ng-click="addJordanPlace()" >save</button>
+        </td>
+        <td></td>
+    </tr>
+    </table>
+
+   <!-- end our table data  -->
                             </div>
                         </td>
                     </tr>

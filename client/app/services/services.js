@@ -94,6 +94,33 @@ angular.module('adviser.services', [])
   };
 
 })
+.factory('Package', function ($http) {
+
+  var addNewPackage = function (package) {
+    return $http({
+      method: 'POST',
+      url: '/api/package',
+      data: package
+    });
+  };
+
+  var getPackages = function (type) {
+    return $http({
+      method: 'GET',
+      url: '/api/package/allPackages/'+type
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
+  return {
+    getPackages: getPackages,
+    addNewPackage: addNewPackage
+  };
+
+
+  })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
   // it is responsible for authenticating our user

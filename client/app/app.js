@@ -2,14 +2,22 @@ angular.module('adviser', [
   'adviser.services',
   'adviser.jordan',
   'adviser.jordanPlace',
+  'adviser.package',
   'adviser.cms',
   'adviser.jordanPlaceCms',
   'adviser.destinationCms',
+  'adviser.packageCms',
   'adviser.destination',
+  'adviser.addJordanPlaceCms',
+  'adviser.addDestinationCms',
+  'adviser.addPackageCms',
+  'ngRoute',
   'ngFileUpload',
-  'ngRoute'
+  'ui.tinymce',
+  'ngMaterial'
 ])
 .config(function ($routeProvider, $httpProvider) {
+
   $routeProvider
   .when('/jordan', {
     templateUrl: 'app/jordan/jordan.html',
@@ -23,27 +31,46 @@ angular.module('adviser', [
       templateUrl: 'app/jordanPlace/jordanPlace.html',
       controller: 'jordanPlaceController'
     })
+  .when('/packages/:type', {
+    templateUrl: 'app/package/package.html',
+    controller: 'packageController'
+  })
   .when('/cms', {
       templateUrl: 'app/cms/login.html',
       controller: 'cmsController'
     })
   .when('/cms/dashboard', {
-      templateUrl: 'app/cms/table.html'
+      templateUrl: 'app/cms/dashboard.html'
       // controller: 'tableController'
     })
   .when('/cms/jordanPlaces', {
       templateUrl: 'app/cms/jordanPlaceCms.html',
       controller: 'jordanPlaceCmsController'
     })
-  .when('/addDestination', {
-    templateUrl: 'app/cms/destination/distinationCms.html',
+  .when('/cms/addPlace', {
+      templateUrl: 'app/cms/addJordanPlaceCms.html',
+      controller: 'addJordanPlaceCmsController'
+    })
+  .when('/cms/destinations', {
+    templateUrl: 'app/cms/destinationCms.html',
     controller: 'destinationCmsController'
   })
-  .when('/destinations', {
+  .when('/cms/addDestination', {
+    templateUrl: 'app/cms/addDestinationCms.html',
+    controller: 'addDestinationCmsController'
+  })
+  .when('/cms/packages/:type', {
+    templateUrl: 'app/cms/packageCms.html',
+    controller: 'packageCmsController'
+  })
+  .when('/cms/addPackage', {
+    templateUrl: 'app/cms/addPackageCms.html',
+    controller: 'addPackageCmsController'
+  })
+  .when('/allDestinations', {
     templateUrl: 'app/destination/destination.html',
     controller: 'destinationController'
-  })
-  ;
+  });
     
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls

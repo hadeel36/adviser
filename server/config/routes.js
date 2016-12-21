@@ -3,16 +3,21 @@ var utils = require('./utils.js');
 var jordanController = require('../jordan/jordanController.js');
 var jordanPlaceController = require('../jordanPlace/jordanPlaceController.js');
 var destinationController= require('../destination/destinationController.js');
+var packageController= require('../package/packageController.js');
 module.exports = function (app, express) {
 
 // jordan api 
 app.get('/api/jordan',jordanController.jordanInfo);
 app.post('/api/jordan',jordanController.createJordan);
+
 // jordanPlace api
 app.get('/api/jordanPlace/placeInfo/:id',jordanPlaceController.placeInfo);
 app.post('/api/jordanPlace',jordanPlaceController.createNewJordanPlace);
-
 app.get('/api/jordanPlace/allPlaces',jordanPlaceController.getAllPlaces);
+
+// package api 
+app.get('/api/package/allPackages/:type', packageController.getPackagesDependonType);
+app.post('/api/package', packageController.createNewPackage);
 
 // destination api
 app.post('/api/addDestination', destinationController.createNewDestination);

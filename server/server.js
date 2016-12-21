@@ -1,10 +1,13 @@
 var express = require('express');
 var mongoose = require('mongoose');
+var autoIncrement = require('mongoose-auto-increment');
 
 var app = express();
 
 // connect to mongo database named "shortly"
-mongoose.connect('mongodb://localhost/adviser');
+var connection = mongoose.connect('mongodb://localhost/adviser');
+autoIncrement.initialize(connection);
+
 
 // configure our server with all the middleware and routing
 require('./config/middleware.js')(app, express);
