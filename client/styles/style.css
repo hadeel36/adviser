@@ -1,40 +1,4 @@
-
-ul{
-list-style-type:none;
-padding:0px;
-margin:0px;
-width:100%;
-background-color:#f1f1f1;
-}
-ul li {
-float : left ;
-width : 100px;
-background-color:#f1f1f1;
-
-}
-li a{
-display: block;
-text-decoration:none;
-padding: 8px 0px 8px 10px;
-color: blue;
-}
-li a:hover{
-background-color : #555;
-color:black;
-}
-.nav-tabs > li > a{
-    cursor:pointer;
-    color: blue;
-}
-
-.nav-tabs li a span:hover {
-    color: red;
-    cursor:pointer;
-}
-
 /*/////// cms style*/
-
-
 #cm-nav li a.arrow {background-image:url('../../images/ArrowButton.png');}
 
 ul#cm-nav ,
