@@ -265,24 +265,25 @@ body {
     font-family: Montserrat, sans-serif;
     margin-bottom: 0;
     border: 0;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     opacity: 0.9;
 }
 .navbar li a, .navbar .navbar-brand { 
-    color: white !important;
-    font-size: 13px;
+    color: MidnightBlue !important;
+    font-size: 15px;
+    font-weight: bolder;
 }
 .navbar-nav li a:hover {
     background-color: MidnightBlue !important;
 }
 .dropdown-menu li a {
-    color: white !important;
+    color: MidnightBlue !important;
+    font-weight: bold;
 }
 .dropdown-menu li a:hover {
-    background-color: MidnightBlue !important;
+    background-color: white !important;
 }
 footer {
-    background-color: #2d2d30;
     color: #f5f5f5;
     padding: 32px;
 }
@@ -298,12 +299,20 @@ footer a:hover {
   position: relative;
   top: 140px;
 }
+.allDestination-div{
+  display: block;
+  position: relative;
+  top: 200px;
+}
 .main-div{
     display: block;
     position: relative;
     top: 190px;
 }
 .hr{
+    display: block;
+    position: relative;
+    top: -20px;
     width:100%;
     height: 5px;
     float: left;
@@ -343,11 +352,19 @@ footer a:hover {
     list-style-type: none;
     font-size: 13px;
 }
-/* <img src="../images/joSmall.jpg" alt="jordan">
- <img src="../images/dubaiSmall.jpg" alt="dubi">
- <img src="../images/egyptSmall02.jpg" alt="egypt">
+.nav-tabs > li > a{
+    cursor:pointer;
+}
+.nav-tabs li a span:hover {
+    color: red;
+    cursor:pointer;
+}
 
- <img src="../images/dubai2.jpg" alt="dubi">
-  <img src="../images/eygpt2.jpg" alt="egypt">
-  <img src="../images/Jordan2.jpg" alt="jordan">*/
+/* <img src="../images/joSmall.jpg" alt="jordan">
+<img src="../images/dubaiSmall.jpg" alt="dubi">
+<img src="../images/egyptSmall02.jpg" alt="egypt">
+
+<img src="../images/dubai2.jpg" alt="dubi">
+<img src="../images/eygpt2.jpg" alt="egypt">
+<img src="../images/Jordan2.jpg" alt="jordan">*/
 
