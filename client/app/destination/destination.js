@@ -2,7 +2,6 @@ angular.module('adviser.destination', [])
 .controller('destinationController', function($scope, Destination){
 
 	$scope.destinations= {};
-	$scope.selectedTab = 0;
 
 	var getAllDestination= function(){
 		Destination.getAllDestination()
@@ -16,8 +15,4 @@ angular.module('adviser.destination', [])
 		});
 	};
 	getAllDestination();
-
-	$scope.selectTab = function(index){
-            $scope.selectedTab = index;
-        };
 });
