@@ -368,3 +368,18 @@ footer a:hover {
 <img src="../images/eygpt2.jpg" alt="egypt">
 <img src="../images/Jordan2.jpg" alt="jordan">*/
 
+/*packages css*/
+.bottomContainer{
+   margin-bottom: 50px;
+}
+.bottomFooter{
+  margin-top: 200px;
+}
+
+
+.imgslider{
+  margin:0 auto;
+  width: 400px;
+  height: 400px;
+  max-height:400px;
+}
