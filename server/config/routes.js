@@ -18,6 +18,7 @@ app.get('/api/jordanPlace/allPlaces',jordanPlaceController.getAllPlaces);
 // package api 
 app.get('/api/package/allPackages/:type', packageController.getPackagesDependonType);
 app.post('/api/package', packageController.createNewPackage);
+app.get('/api/package/packageInfo/:id', packageController.packageInfo);
 
 // destination api
 app.post('/api/addDestination', destinationController.createNewDestination);

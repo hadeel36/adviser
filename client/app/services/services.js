@@ -114,9 +114,20 @@ angular.module('adviser.services', [])
     });
   };
 
+  var getPackage = function (id) {
+    return $http({
+      method: 'GET',
+      url: '/api/package/packageInfo/'+id
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  }
+
   return {
     getPackages: getPackages,
-    addNewPackage: addNewPackage
+    addNewPackage: addNewPackage,
+    getPackage: getPackage
   };
 
 
