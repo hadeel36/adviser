@@ -8,7 +8,7 @@ angular.module('adviser.destination', [])
 		.then(function(destinations){
 			$scope.destinations= destinations;
 			console.log($scope.destinations);
-			console.log($scope.destinations[0]._id);
+			console.log($scope.destinations[2].mapPhoto);
 		}).catch(function(error){
 			throw error;
 			console.log(error);
