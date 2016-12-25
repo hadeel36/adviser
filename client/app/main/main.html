@@ -1,6 +1,6 @@
 <div ng-include="'../header.html'">                    
 </div>
-<div class="carousel slide main-div" data-ride="carousel">
+<div id="myCarousel" class="carousel slide main-div" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -41,16 +41,16 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<br><br><br><br><br><br><br>
+<br>
 <hr class="back hr"><br>
-<h1 align="center">Featured Tours</h1><br>
+<h1 align="center">Popular Destinations</h1><br>
 <div class="row text-center">
   <div class="col-sm-4 col-sm-offset-2">
     <div class="home-img thumbnail back">
-      <img src="../images/joSmall.jpg" alt="jordan">
+      <img src='{{first.mainPhoto}}' alt="{{first.destinationName}}">
       <div class="overlay">
-        <div class="text">PACKAGE DESCRIPTION</div>
-        <button class="more-detail btn">More details</button>
+        <div class="text">{{first.destinationName}}</div>
+        <button class="more-detail btn"><a href="/allDestination/{{first.destinationName}}/{{first._id}}"> More details</a></button>
       </div>
       <p style="font-size: 20px; color: MidnightBlue"><strong>JORDAN</strong></p>
       <p style="font-size: 18px; color: MidnightBlue">Fri. 27 November 2015</p> 
@@ -58,10 +58,10 @@
   </div>
   <div class="col-sm-4">
     <div class="home-img thumbnail back">
-      <img src="../images/dubaiSmall.jpg" alt="dubi">
+      <img src="{{second.mainPhoto}}" alt="{{second.destinationName}}">
       <div class="overlay">
-        <div class="text">PACKAGE  DESCRIPTION</div>
-        <button class="more-detail btn">More details</button>
+        <div class="text">{{second.destinationName}}</div>
+        <button class="more-detail btn"><a href="/allDestination/{{second.destinationName}}/{{second._id}}">More details</a></button>
       </div>
       <p style="font-size: 20px; color: MidnightBlue"><strong>DUBI</strong></p>
       <p style="font-size: 18px; color: MidnightBlue">Sat. 28 November 2015</p>
@@ -69,10 +69,10 @@
   </div>
   <div class="col-sm-4 col-sm-offset-2">
     <div class="home-img thumbnail back">
-      <img src="../images/egyptSmall02.jpg" alt="egypt">
+      <img src=".{{third.mainPhoto}}" alt="{{third.destinationName}}">
       <div class="overlay">
-        <div class="text">PACKAGE DESCRIPTION</div>
-        <button class="more-detail btn">More details</button>
+        <div class="text">{{third.destinationName}}</div>
+        <button class="more-detail btn"><a href="/allDestination/{{third.destinationName}}/{{third._id}}">More details</a></button>
       </div>
       <p style="font-size: 20px; color: MidnightBlue"><strong>EGYPT</strong></p>
       <p style="font-size: 18px; color: MidnightBlue">Sun. 29 November 2015</p>
@@ -80,15 +80,42 @@
   </div>
   <div class="col-sm-4">
     <div class="home-img thumbnail back">
-      <img src="../images/dubaiSmall.jpg" alt="dubi">
+      <img src="{{fourth.mainPhoto}}" alt="{{fourth.destinationName}}">
       <div class="overlay">
-        <div class="text">PACKAGE DESCRIPTION</div>
-        <button class="more-detail btn">More details</button>
+        <div class="text">{{fourth.destinationName}}</div>
+        <button class="more-detail btn"><a href="/allDestination/{{fourth.destinationName}}/{{fourth._id}}">More details</a></button>
       </div>
       <p style="font-size: 20px; color: MidnightBlue"><strong>DUBI</strong></p>
       <p style="font-size: 18px; color: MidnightBlue">Sat. 28 November 2015</p>
     </div>
   </div>
 </div>
-<div ng-include="'../footer.html'">                    
+<hr style="height: 5px; display: block;position: relative;top: -46px" class="back">
+<div class="row">
+  <h2 align="center">Special Promotions</h2><br>
+  <div class="col-sm-4 col-sm-offset-2">
+    <a href="/#/packages/{{firstP.type}}/{{firstP._id}}"><img src="{{firstP.mainPhoto}}" alt="{{firstP.packageName}}" width="497px" height="300px"></a>
+    <h1 class="ribbon">
+       <strong class="ribbon-content">{{firstP.packageName}} | {{firstP.destination}} | {{firstP.type}}</strong>
+    </h1>
+  </div>
+   <div class="col-md-4">
+    <a href="/#/packages/{{secondP.type}}/{{secondP._id}}"><img src="{{secondP.mainPhoto}}" alt="{{secondP.packageName}}" width="497px" height="300px"></a>
+    <h1 class="ribbon">
+       <strong class="ribbon-content">{{secondP.packageName}} | {{secondP.destination}} | {{secondP.type}}</strong>
+    </h1>
+  </div>
+   <div class="col-md-4 col-sm-offset-2">
+    <a href="/#/packages/{{thirdP.type}}/{{thirdP._id}}"><img src="{{thirdP.mainPhoto}}" alt="{{thirdP.packageName}}" width="497px" height="300px"></a>
+    <h1 class="ribbon">
+       <strong class="ribbon-content">{{thirdP.packageName}} | {{thirdP.destination}} | {{thirdP.type}}</strong>
+    </h1>
+  </div>
+   <div class="col-md-4">
+    <a href="/#/packages/{{fourthP.type}}/{{fourthP._id}}"><img src="{{fourthP.mainPhoto}}" alt="{{fourthP.packageName}}" width="497px" height="300px"></a>
+    <h1 class="ribbon">
+       <strong class="ribbon-content">{{fourthP.packageName}} | {{fourthP.destination}} | {{fourthP.type}}</strong>
+    </h1>
+  </div>
 </div>
+<div ng-include='"../footer.html"'></div>

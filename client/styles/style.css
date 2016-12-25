@@ -250,16 +250,17 @@ body {
 }
 .more-detail {
     padding: 10px 20px;
-    background-color: #333;
-    color: #f1f1f1;
+    background-color: white;
+    font-weight: bold;
+    color: MidnightBlue;
     border-radius: 0;
     transition: .2s;
-    margin: 340px;
+    margin: 190px;
 }
 .more-detail:hover, .more-detail:focus {
-    border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
+    border: 1px solid MidnightBlue;
+    background-color: MidnightBlue;
+    color: white;
 } 
 .navbar {
     font-family: Montserrat, sans-serif;
@@ -267,6 +268,7 @@ body {
     border: 0;
     letter-spacing: 2px;
     opacity: 0.9;
+    z-index: 10;
 }
 .navbar li a, .navbar .navbar-brand { 
     color: MidnightBlue !important;
@@ -274,7 +276,7 @@ body {
     font-weight: bolder;
 }
 .navbar-nav li a:hover {
-    background-color: MidnightBlue !important;
+    background-color: white !important;
 }
 .dropdown-menu li a {
     color: MidnightBlue !important;
@@ -299,20 +301,20 @@ footer a:hover {
   position: relative;
   top: 140px;
 }
-.allDestination-div{
+/*.allDestination-div{
   display: block;
   position: relative;
   top: 200px;
-}
-.main-div{
+}*/
+/*.main-div{
     display: block;
     position: relative;
     top: 190px;
-}
+}*/
 .hr{
     display: block;
     position: relative;
-    top: -20px;
+    top: -50px;
     width:100%;
     height: 5px;
     float: left;
@@ -346,7 +348,6 @@ footer a:hover {
     list-style: none;
     list-style-type: none;
 }
-
 .address li{
     list-style: none;
     list-style-type: none;
@@ -373,13 +374,59 @@ footer a:hover {
    margin-bottom: 50px;
 }
 .bottomFooter{
-  margin-top: 200px;
+  margin-top: 50px;
 }
-
-
 .imgslider{
   margin:0 auto;
   width: 400px;
   height: 400px;
   max-height:400px;
+}
+.ribbon {
+ font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+  width: 102%; 
+ position: relative;
+ /*background: #ba89b6;*/
+ background-image: url('../images/back3.jpg');
+ color: #fff;
+ text-align: center;
+ top: -110px;
+ left: -15px;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid MidnightBlue;
+ z-index: -1;
+}
+/*.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}*/
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: MidnightBlue transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
 }

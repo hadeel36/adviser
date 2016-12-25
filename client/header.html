@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top back">
+<nav class="navbar navbar-default back">
         <div class="container-fluid">
           <div class="navbar-header" style="height: 190px">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -15,19 +15,18 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">DESTINATIONS
                 <span class="caret"></span></a>
-                <ul class="dropdown-menu back">
-                  <li><a href="#">Jordan</a></li>
-                  <li><a href="#">Egypt</a></li>
-                  <li><a href="#">Dubai<li><a href="#">ABOUT US</a></li></a></li> 
+                <ul class="dropdown-menu back" ng-repeat="destination in destinations">
+                  <li><a href="/allDestination/{{destination.destinationName}}/{{destination._id}}">{{destination.destinationName}}</a></li> 
                 </ul>
               </li>
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">SPECIAL PROMOTIONS
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu back">
-                  <li><a href="#">Merchandise</a></li>
-                  <li><a href="#">Extras</a></li>
-                  <li><a href="#">Media</a></li> 
+                  <li><a href="/#/packages/{{first.type}}/{{first._id}}">{{first.packageName}}</a></li>
+                  <li><a href="/#/packages/{{second.type}}/{{second._id}}">{{second.packageName}}</a></li>
+                  <li><a href="/#/packages/{{third.type}}/{{third._id}}">{{third.packageName}}</a></li>
+                  <li><a href="/#/packages/{{fourth.type}}/{{fourth._id}}">{{fourth.packageName}}</a></li> 
                 </ul>
               </li>
               <li><a href="#">TOURS</a></li>

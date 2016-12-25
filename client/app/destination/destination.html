@@ -1,16 +1,37 @@
 <div ng-include="'../header.html'"></div>
 
-<div class="container-fluid allDestination-div">
+<div class="container">
+	<p style="font-size: 20px"><span style="font-size: 37px"><strong>destinationInfo.destinationName</strong></span></General informaion</p>
+	<hr class="back" style="height: 8px">
 	<div class="row">
 		<div class="col-xs-6 col-md-6">
-			<img src="../images/dubaiSmall.jpg">
-			<!-- <img src={{destinations[2].mapPhoto}}> -->
+			<!-- <img src="../images/dubaiSmall.jpg" width="560px" height="350px"> -->
+			<img src={{destinationInfo.mapPhoto}}  width="560px" height="350px">
 		</div>
 		<div class="col-xs-6 col-md-6">
-			<img src="../images/dubaiSmall.jpg">
-			<!-- <img src={{destinations[2].mainPhoto}}> -->
+			<!-- <img src="../images/dubaiSmall.jpg" width="560px" height="350px"> -->
+			<img src={{destinationInfo.mainPhoto}}  width="560px" height="350px">
+		</div>
+	</div><br><br><br>
+	<div class="row">
+		<div class="">
+			<p id="description"></p>
 		</div>
 	</div>
+	<div class="row">
+        <div class="col-md-9">
+        <hr>
+		<div id="slides_control">
+		    <div>
+		      <carousel interval="myInterval">
+		        <slide ng-repeat="pic in destinationPhotos " active="slide.active">
+		          <img ng-src="{{pic}}" class="imgslider">
+		          <!-- <div class="carousel-caption">
+		            <h4>Slide {{$index+1}}</h4>
+		          </div> -->
+		        </slide>
+		      </carousel>
+		    </div>
+	</div>
 </div>
-<br><br><br><br><br><br><br><br><br>
 <div ng-include="'../footer.html'"></div>

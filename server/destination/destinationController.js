@@ -40,5 +40,8 @@ module.exports = {
 		.exec(function (err, destinations) {
 			repsonseHandler(err, req, res, {status: 201, returnObj: destinations}, next);
 		});
-	}		
+	}
+	// getDestinationsNames: function(req, res, next){
+
+	// }		
 };

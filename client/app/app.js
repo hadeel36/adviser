@@ -1,4 +1,5 @@
 angular.module('adviser', [
+  ,'adviser.header',
   'adviser.services',
   'adviser.jordan',
   'adviser.jordanPlace',
@@ -74,12 +75,17 @@ angular.module('adviser', [
     templateUrl: 'app/cms/addPackageCms.html',
     controller: 'addPackageCmsController'
   })
-  .when('/allDestinations', {
+  .when('/allDestinations/:destinationName/:id', {
     templateUrl: 'app/destination/destination.html',
     controller: 'destinationController'
   })
   .when('/Home', {
-    templateUrl: 'app/main/main.html'
+    templateUrl: 'app/main/main.html',
+    controller: 'destinationController'
+  })
+  .when('/', {
+    templateUrl: 'header.html',
+    controller: 'headerController'
   })
   ;
     

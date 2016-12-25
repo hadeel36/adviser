@@ -77,7 +77,7 @@ angular.module('adviser.services', [])
     });
   };
 
-  var getAllDestination = function () {
+  var getAllDestinations = function () {
     return $http({
       method: 'GET',
       url: '/api/destination'
@@ -87,10 +87,21 @@ angular.module('adviser.services', [])
     });
   };
 
+  var getDestinationInfo = function (id) {
+    return $http({
+      method: 'GET',
+      url: '/api/allDestinations/'+id
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
   return{
     addDestination: addDestination,
     uploadPicture: uploadPicture,
-    getAllDestination: getAllDestination
+    getAllDestinations: getAllDestinations,
+    getDestinationInfo: getDestinationInfo
   };
 
 })
