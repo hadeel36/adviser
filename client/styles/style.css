@@ -369,19 +369,8 @@ footer a:hover {
 <img src="../images/eygpt2.jpg" alt="egypt">
 <img src="../images/Jordan2.jpg" alt="jordan">*/
 
-/*packages css*/
-.bottomContainer{
-   margin-bottom: 50px;
-}
-.bottomFooter{
-  margin-top: 50px;
-}
-.imgslider{
-  margin:0 auto;
-  width: 400px;
-  height: 400px;
-  max-height:400px;
-}
+
+
 .ribbon {
  font-size: 16px !important;
  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
@@ -430,3 +419,45 @@ footer a:hover {
  right: 0;
  border-width: 1em 1em 0 0;
 }
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+/*packages css*/
+.bottomContainer{
+   margin-bottom: 50px;
+}
+.bottomFooter{
+
+  margin-top: 50px;
+}
+
+.imgslider{
+  margin:0 auto;
+  width: 400px;
+  height: 400px;
+  max-height:400px;
+}
+
+/*jordan css*/
+.textt{
+ width:250px; 
+ height:215px; 
+ background:#FFF;
+ opacity:0;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+   } 
+.pic:hover .textt{ 
+  opacity:0.7;
+  text-align:center;
+  color:#000000;
+  font-size:25px;
+  font-weight:700;
+  font-family:"Times New Roman", Times, serif;
+  padding:50px;
+   } 

@@ -8,7 +8,7 @@ angular.module('adviser.destination', [])
 		.then(function(destinationInfo){
 			$scope.destinationInfo= destinationInfo;
 			$scope.destinationPhotos= destinationInfo.photos;
-			$('description').html(destinationInfo.description);
+			$('#description').html(destinationInfo.description);
 		}).catch(function(error){
 			throw error;
 			console.log(error);
@@ -33,17 +33,14 @@ angular.module('adviser.destination', [])
 	getAllDestinations();
 
 	var getAllPackages= function(){
-		Package.getPackages()
+		Package.getPackages("specialPromotions")
 		.then(function(packages){
-			$scope.packages= packages;
-			$scope.firstP= $scope.packages[$scope.packages.length];
-			$scope.secondP= $scope.packages[$scope.packages.length-1];
-			$scope.thirdP= $scope.packages[$scope.packages.length-2];
-			$scope.fourthP= $scope.packages[$scope.packages.length-3];
-			console.log($scope.packages);
+			$scope.firstP= packages[packages.length];
+			$scope.secondP= packages[packages.length-1];
+			$scope.thirdP= packages[packages.length-2];
+			$scope.fourthP= packages[packages.length-3];
 		}).catch(function(error){
-			throw error;
-			console.log(error);
+			alert("an error eccured");
 		});
 	};
 	getAllPackages();

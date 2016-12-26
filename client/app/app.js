@@ -75,19 +75,14 @@ angular.module('adviser', [
     templateUrl: 'app/cms/addPackageCms.html',
     controller: 'addPackageCmsController'
   })
-  .when('/allDestinations/:destinationName/:id', {
+  .when('/destinations/:destinationName/:id', {
     templateUrl: 'app/destination/destination.html',
     controller: 'destinationController'
   })
-  .when('/Home', {
+  .when('/home', {
     templateUrl: 'app/main/main.html',
     controller: 'destinationController'
-  })
-  .when('/', {
-    templateUrl: 'header.html',
-    controller: 'headerController'
-  })
-  ;
+  });
     
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls
