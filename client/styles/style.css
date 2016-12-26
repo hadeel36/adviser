@@ -250,39 +250,42 @@ body {
 }
 .more-detail {
     padding: 10px 20px;
-    background-color: #333;
-    color: #f1f1f1;
+    background-color: white;
+    font-weight: bold;
+    color: MidnightBlue;
     border-radius: 0;
     transition: .2s;
-    margin: 340px;
+    margin: 190px;
 }
 .more-detail:hover, .more-detail:focus {
-    border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
+    border: 1px solid MidnightBlue;
+    background-color: MidnightBlue;
+    color: white;
 } 
 .navbar {
     font-family: Montserrat, sans-serif;
     margin-bottom: 0;
     border: 0;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     opacity: 0.9;
+    z-index: 10;
 }
 .navbar li a, .navbar .navbar-brand { 
-    color: white !important;
-    font-size: 13px;
+    color: MidnightBlue !important;
+    font-size: 15px;
+    font-weight: bolder;
 }
 .navbar-nav li a:hover {
-    background-color: MidnightBlue !important;
+    background-color: white !important;
 }
 .dropdown-menu li a {
-    color: white !important;
+    color: MidnightBlue !important;
+    font-weight: bold;
 }
 .dropdown-menu li a:hover {
-    background-color: MidnightBlue !important;
+    background-color: white !important;
 }
 footer {
-    background-color: #2d2d30;
     color: #f5f5f5;
     padding: 32px;
 }
@@ -298,12 +301,20 @@ footer a:hover {
   position: relative;
   top: 140px;
 }
-.main-div{
+/*.allDestination-div{
+  display: block;
+  position: relative;
+  top: 200px;
+}*/
+/*.main-div{
     display: block;
     position: relative;
     top: 190px;
-}
+}*/
 .hr{
+    display: block;
+    position: relative;
+    top: -50px;
     width:100%;
     height: 5px;
     float: left;
@@ -337,17 +348,85 @@ footer a:hover {
     list-style: none;
     list-style-type: none;
 }
-
 .address li{
     list-style: none;
     list-style-type: none;
     font-size: 13px;
 }
+.nav-tabs > li > a{
+    cursor:pointer;
+}
+.nav-tabs li a span:hover {
+    color: red;
+    cursor:pointer;
+}
+
 /* <img src="../images/joSmall.jpg" alt="jordan">
- <img src="../images/dubaiSmall.jpg" alt="dubi">
- <img src="../images/egyptSmall02.jpg" alt="egypt">
+<img src="../images/dubaiSmall.jpg" alt="dubi">
+<img src="../images/egyptSmall02.jpg" alt="egypt">
 
- <img src="../images/dubai2.jpg" alt="dubi">
-  <img src="../images/eygpt2.jpg" alt="egypt">
-  <img src="../images/Jordan2.jpg" alt="jordan">*/
+<img src="../images/dubai2.jpg" alt="dubi">
+<img src="../images/eygpt2.jpg" alt="egypt">
+<img src="../images/Jordan2.jpg" alt="jordan">*/
 
+/*packages css*/
+.bottomContainer{
+   margin-bottom: 50px;
+}
+.bottomFooter{
+  margin-top: 50px;
+}
+.imgslider{
+  margin:0 auto;
+  width: 400px;
+  height: 400px;
+  max-height:400px;
+}
+.ribbon {
+ font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+  width: 102%; 
+ position: relative;
+ /*background: #ba89b6;*/
+ background-image: url('../images/back3.jpg');
+ color: #fff;
+ text-align: center;
+ top: -110px;
+ left: -15px;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid MidnightBlue;
+ z-index: -1;
+}
+/*.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}*/
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: MidnightBlue transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}

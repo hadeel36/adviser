@@ -1,20 +1,40 @@
+<<<<<<< HEAD
+<div ng-include="'../header.html'"></div>
 
-  <div role="tabpanel">
-    <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" ng-repeat="destination in destinations" ng-click="selectTab($index)" ng-class="{'active':selectedTab == $index}">
-            <a data-target="#{{destination._id}}" aria-controls="home" role="tab" data-toggle="tab">{{destination.destinationName}}</a>
-        </li>
-    </ul>
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="{{destination._id}}">
-          <h3>{{destinations[selectedTab].destinationName}}</h3>
-          <h3>Content:- {{destinations[selectedTab].description}}</h3>
-          <div>          
-            <img src="{{destinations[selectedTab].mainPhoto}}" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"> 
-          </div>
-          <div>
-            <img src="{{destinations[selectedTab].mapPhoto}}" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"> 
-          </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+	<p style="font-size: 20px"><span style="font-size: 37px"><strong>destinationInfo.destinationName</strong></span></General informaion</p>
+	<hr class="back" style="height: 8px">
+	<div class="row">
+		<div class="col-xs-6 col-md-6">
+			<!-- <img src="../images/dubaiSmall.jpg" width="560px" height="350px"> -->
+			<img src={{destinationInfo.mapPhoto}}  width="560px" height="350px">
+		</div>
+		<div class="col-xs-6 col-md-6">
+			<!-- <img src="../images/dubaiSmall.jpg" width="560px" height="350px"> -->
+			<img src={{destinationInfo.mainPhoto}}  width="560px" height="350px">
+		</div>
+	</div><br><br><br>
+	<div class="row">
+		<div class="">
+			<p id="description"></p>
+		</div>
+	</div>
+	<div class="row">
+        <div class="col-md-9">
+        <hr>
+		<div id="slides_control">
+		    <div>
+		      <carousel interval="myInterval">
+		        <slide ng-repeat="pic in destinationPhotos " active="slide.active">
+		          <img ng-src="{{pic}}" class="imgslider">
+		          <!-- <div class="carousel-caption">
+		            <h4>Slide {{$index+1}}</h4>
+		          </div> -->
+		        </slide>
+		      </carousel>
+		    </div>
+	</div>
+</div>
+<div ng-include="'../footer.html'"></div>
+=======
+>>>>>>> 58974bf25e46ae0aaa72e719aa4ba8fae76c2f7b

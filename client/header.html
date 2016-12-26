@@ -1,0 +1,49 @@
+
+<nav class="navbar navbar-default back">
+        <div class="container-fluid">
+          <div class="navbar-header" style="height: 190px">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#myPage"><img src="../images/logo4.png" alt="adviser" width="185px" height="170px"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav center-block back">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">JORDAN</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">DESTINATIONS
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu back" ng-repeat="destination in destinations">
+                  <li><a href="/allDestination/{{destination.destinationName}}/{{destination._id}}">{{destination.destinationName}}</a></li> 
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">SPECIAL PROMOTIONS
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu back">
+                  <li><a href="/#/packages/{{first.type}}/{{first._id}}">{{first.packageName}}</a></li>
+                  <li><a href="/#/packages/{{second.type}}/{{second._id}}">{{second.packageName}}</a></li>
+                  <li><a href="/#/packages/{{third.type}}/{{third._id}}">{{third.packageName}}</a></li>
+                  <li><a href="/#/packages/{{fourth.type}}/{{fourth._id}}">{{fourth.packageName}}</a></li> 
+                </ul>
+              </li>
+              <li><a href="#">TOURS</a></li>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">CONTACT US</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        // Hover drop down menu list
+        $('ul.nav li.dropdown').hover(function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        });
+      </script>

@@ -18,11 +18,12 @@ app.get('/api/jordanPlace/allPlaces',jordanPlaceController.getAllPlaces);
 // package api 
 app.get('/api/package/allPackages/:type', packageController.getPackagesDependonType);
 app.post('/api/package', packageController.createNewPackage);
+app.get('/api/package/packageInfo/:id', packageController.packageInfo);
 
 // destination api
 app.post('/api/addDestination', destinationController.createNewDestination);
 app.get('/api/destination', destinationController.getAllDestination);
-
+app.get('/api/allDestinations/:id', destinationController.destinationInfo)
 // upload an image 
 app.post('/api/upload',utils.uploadImg);
   // If a request is sent somewhere other than the routes above,

@@ -1,8 +1,10 @@
 angular.module('adviser', [
+  ,'adviser.header',
   'adviser.services',
   'adviser.jordan',
   'adviser.jordanPlace',
   'adviser.package',
+  'adviser.packageInfo',
   'adviser.cms',
   'adviser.jordanPlaceCms',
   'adviser.destinationCms',
@@ -14,7 +16,9 @@ angular.module('adviser', [
   'ngRoute',
   'ngFileUpload',
   'ui.tinymce',
-  'ngMaterial'
+  'ngMaterial',
+  'angularUtils.directives.dirPagination',
+  'ui.bootstrap'
 ])
 .config(function ($routeProvider, $httpProvider) {
 
@@ -34,6 +38,10 @@ angular.module('adviser', [
   .when('/packages/:type', {
     templateUrl: 'app/package/package.html',
     controller: 'packageController'
+  })
+  .when('/packages/:type/:id', {
+    templateUrl: 'app/package/packageInfo.html',
+    controller: 'packageInfoController'
   })
   .when('/cms', {
       templateUrl: 'app/cms/login.html',
@@ -67,12 +75,17 @@ angular.module('adviser', [
     templateUrl: 'app/cms/addPackageCms.html',
     controller: 'addPackageCmsController'
   })
-  .when('/allDestinations', {
+  .when('/allDestinations/:destinationName/:id', {
     templateUrl: 'app/destination/destination.html',
     controller: 'destinationController'
   })
   .when('/Home', {
-    templateUrl: 'app/main/main.html'
+    templateUrl: 'app/main/main.html',
+    controller: 'destinationController'
+  })
+  .when('/', {
+    templateUrl: 'header.html',
+    controller: 'headerController'
   })
   ;
     

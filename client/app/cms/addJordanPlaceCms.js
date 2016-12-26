@@ -71,7 +71,7 @@ $scope.upload = function(file) {//upload an image to the game
   plugins: [
     "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
     "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-    "table contextmenu directionality emoticons template textcolor paste fullpage textcolor colorpicker textpattern"
+    "table contextmenu directionality emoticons template textcolor paste textcolor colorpicker textpattern"
   ],
 
   toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
@@ -111,6 +111,14 @@ $scope.upload = function(file) {//upload an image to the game
     classes: 'tablerow1'
   }]
 };
-    
-
+ 
+  
+   //  console.log($scope.tinymceModel.replace(/<[^>]*>/ig, ' ')
+   // .replace(/<\/[^>]*>/ig, ' ')
+   // .replace(/&nbsp;|&#160;/gi, ' ')
+   // .replace(/\s+/ig, ' ')
+   // .trim());
+   // var te=tinyMCE.activeEditor.getBody().textContent;
+   // console.log(te);
+  
   });

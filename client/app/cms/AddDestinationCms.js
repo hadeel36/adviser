@@ -83,7 +83,7 @@ angular.module('adviser.addDestinationCms', [])
 		plugins: [
 		"advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
 		"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-		"table contextmenu directionality emoticons template textcolor paste fullpage textcolor colorpicker textpattern"
+		"table contextmenu directionality emoticons template textcolor paste textcolor colorpicker textpattern"
 		],
 
 		toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
