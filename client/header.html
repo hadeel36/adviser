@@ -1,4 +1,4 @@
-
+ <div ng-controller="headerController">
 <nav class="navbar navbar-default back">
         <div class="container-fluid">
           <div class="navbar-header" style="height: 190px">
@@ -11,28 +11,28 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav center-block back">
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">JORDAN</a></li>
+              <li><a href="/#/home">HOME</a></li>
+              <li><a href="/#/jordan">JORDAN</a></li>
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">DESTINATIONS
                 <span class="caret"></span></a>
-                <ul class="dropdown-menu back" ng-repeat="destination in destinations">
-                  <li><a href="/allDestination/{{destination.destinationName}}/{{destination._id}}">{{destination.destinationName}}</a></li> 
+                <ul class="dropdown-menu back" >
+                  <li ng-repeat="destination in destinations">
+                  <a href="/#/destinations/{{destination.destinationName}}/{{destination._id}}">{{destination.destinationName}}</a></li> 
                 </ul>
               </li>
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">SPECIAL PROMOTIONS
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">TOURS
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu back">
-                  <li><a href="/#/packages/{{first.type}}/{{first._id}}">{{first.packageName}}</a></li>
-                  <li><a href="/#/packages/{{second.type}}/{{second._id}}">{{second.packageName}}</a></li>
-                  <li><a href="/#/packages/{{third.type}}/{{third._id}}">{{third.packageName}}</a></li>
-                  <li><a href="/#/packages/{{fourth.type}}/{{fourth._id}}">{{fourth.packageName}}</a></li> 
+                  <li><a href="/#/packages/individuals">Individuals</a></li>
+                  <li><a href="/#/packages/groups">Groups</a></li>
+                  <li><a href="/#/packages/guaranteedDeparture">Guaranteed Departure</a></li> 
                 </ul>
               </li>
-              <li><a href="#">TOURS</a></li>
-              <li><a href="#">ABOUT US</a></li>
-              <li><a href="#">CONTACT US</a></li>
+              <li><a href="/#/packages/specialPromotions">SPECIAL PROMOTIONS</a></li>
+              <li><a href="/#/aboutUs">ABOUT US</a></li>
+              <li><a href="/#/contactUs">CONTACT US</a></li>
               <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
             </ul>
           </div>
@@ -47,3 +47,4 @@
           $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
         });
       </script>
+      </div>

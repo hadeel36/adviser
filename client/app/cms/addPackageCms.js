@@ -79,7 +79,7 @@ angular.module('adviser.addPackageCms', [])
 	}
 
 	var getAllDestination= function(){
-		Destination.getAllDestination()
+		Destination.getAllDestinations()
 		.then(function(destinations){
 			$scope.destinations= destinations;
 		}).catch(function(error){

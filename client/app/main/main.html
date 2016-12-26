@@ -43,56 +43,56 @@
 </div>
 <br>
 <hr class="back hr"><br>
-<h1 align="center">Popular Destinations</h1><br>
+<h1 align="center" class="text-primary">Popular Destinations</h1><br>
 <div class="row text-center">
   <div class="col-sm-4 col-sm-offset-2">
     <div class="home-img thumbnail back">
-      <img src='{{first.mainPhoto}}' alt="{{first.destinationName}}">
+      <img style="height:275px ;width:500px;" src='{{first.mainPhoto}}' alt="{{first.destinationName}}">
       <div class="overlay">
         <div class="text">{{first.destinationName}}</div>
-        <button class="more-detail btn"><a href="/allDestination/{{first.destinationName}}/{{first._id}}"> More details</a></button>
+        <button class="more-detail btn"><a href="/#/destinations/{{first.destinationName}}/{{first._id}}"> More details</a></button>
       </div>
-      <p style="font-size: 20px; color: MidnightBlue"><strong>JORDAN</strong></p>
-      <p style="font-size: 18px; color: MidnightBlue">Fri. 27 November 2015</p> 
+      <p style="font-size: 25px; color: MidnightBlue"><strong>{{first.destinationName}}</strong></p>
+      <!-- <p style="font-size: 18px; color: MidnightBlue">Fri. 27 November 2015</p>  -->
     </div>
   </div>
   <div class="col-sm-4">
     <div class="home-img thumbnail back">
-      <img src="{{second.mainPhoto}}" alt="{{second.destinationName}}">
+      <img style="height:275px ;width:500px;" src="{{second.mainPhoto}}" alt="{{second.destinationName}}">
       <div class="overlay">
         <div class="text">{{second.destinationName}}</div>
-        <button class="more-detail btn"><a href="/allDestination/{{second.destinationName}}/{{second._id}}">More details</a></button>
+        <button class="more-detail btn"><a href="/#/destinations/{{second.destinationName}}/{{second._id}}">More details</a></button>
       </div>
-      <p style="font-size: 20px; color: MidnightBlue"><strong>DUBI</strong></p>
-      <p style="font-size: 18px; color: MidnightBlue">Sat. 28 November 2015</p>
+      <p style="font-size: 25px; color: MidnightBlue"><strong>{{second.destinationName}}</strong></p>
+      <!-- <p style="font-size: 18px; color: MidnightBlue">Sat. 28 November 2015</p> -->
     </div>
   </div>
   <div class="col-sm-4 col-sm-offset-2">
     <div class="home-img thumbnail back">
-      <img src=".{{third.mainPhoto}}" alt="{{third.destinationName}}">
+      <img style="height:275px ;width:500px;" src=".{{third.mainPhoto}}" alt="{{third.destinationName}}">
       <div class="overlay">
         <div class="text">{{third.destinationName}}</div>
-        <button class="more-detail btn"><a href="/allDestination/{{third.destinationName}}/{{third._id}}">More details</a></button>
+        <button class="more-detail btn"><a href="/#/destinations/{{third.destinationName}}/{{third._id}}">More details</a></button>
       </div>
-      <p style="font-size: 20px; color: MidnightBlue"><strong>EGYPT</strong></p>
-      <p style="font-size: 18px; color: MidnightBlue">Sun. 29 November 2015</p>
+      <p style="font-size: 25px; color: MidnightBlue"><strong>{{third.destinationName}}</strong></p>
+      <!-- <p style="font-size: 18px; color: MidnightBlue">Sun. 29 November 2015</p> -->
     </div>
   </div>
   <div class="col-sm-4">
     <div class="home-img thumbnail back">
-      <img src="{{fourth.mainPhoto}}" alt="{{fourth.destinationName}}">
+      <img style="height:275px ;width:500px;" src="{{fourth.mainPhoto}}" alt="{{fourth.destinationName}}">
       <div class="overlay">
         <div class="text">{{fourth.destinationName}}</div>
-        <button class="more-detail btn"><a href="/allDestination/{{fourth.destinationName}}/{{fourth._id}}">More details</a></button>
+        <button class="more-detail btn"><a href="/#/destinations/{{fourth.destinationName}}/{{fourth._id}}">More details</a></button>
       </div>
-      <p style="font-size: 20px; color: MidnightBlue"><strong>DUBI</strong></p>
-      <p style="font-size: 18px; color: MidnightBlue">Sat. 28 November 2015</p>
+      <p style="font-size: 25px; color: MidnightBlue"><strong>{{fourth.destinationName}}</strong></p>
+      <!-- <p style="font-size: 18px; color: MidnightBlue">Sat. 28 November 2015</p> -->
     </div>
   </div>
 </div>
-<hr style="height: 5px; display: block;position: relative;top: -46px" class="back">
+<hr style="height: 5px; display: block;position: relative;top: -46px margin-top:10px;" class="back">
 <div class="row">
-  <h2 align="center">Special Promotions</h2><br>
+  <h2 align="center" class="text-primary">Special Promotions</h2><br>
   <div class="col-sm-4 col-sm-offset-2">
     <a href="/#/packages/{{firstP.type}}/{{firstP._id}}"><img src="{{firstP.mainPhoto}}" alt="{{firstP.packageName}}" width="497px" height="300px"></a>
     <h1 class="ribbon">

@@ -90,7 +90,7 @@ angular.module('adviser.services', [])
   var getDestinationInfo = function (id) {
     return $http({
       method: 'GET',
-      url: '/api/allDestinations/'+id
+      url: '/api/destination/destinationInfo/'+id
     })
     .then(function (resp) {
       return resp.data;
