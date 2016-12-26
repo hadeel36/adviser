@@ -79,7 +79,7 @@ angular.module('adviser', [
     templateUrl: 'app/destination/destination.html',
     controller: 'destinationController'
   })
-  .when('/', {
+  .when('/Home', {
     templateUrl: 'app/main/main.html',
     controller: 'destinationController'
   });
