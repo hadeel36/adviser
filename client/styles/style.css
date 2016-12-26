@@ -423,19 +423,23 @@ footer a:hover {
 .portfolio-item {
     margin-bottom: 25px;
 }
+
 /*packages css*/
 .bottomContainer{
    margin-bottom: 50px;
 }
 .bottomFooter{
+
   margin-top: 50px;
 }
+
 .imgslider{
   margin:0 auto;
   width: 400px;
   height: 400px;
   max-height:400px;
 }
+
 /*jordan css*/
 .textt{
  width:250px; 
@@ -457,4 +461,3 @@ footer a:hover {
   font-family:"Times New Roman", Times, serif;
   padding:50px;
    } 
-
