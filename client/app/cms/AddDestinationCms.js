@@ -1,3 +1,4 @@
+'use strict';
 angular.module('adviser.addDestinationCms', [])
 .controller('addDestinationCmsController', function($scope, $window, Destination){
 
