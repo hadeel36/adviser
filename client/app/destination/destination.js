@@ -35,7 +35,7 @@ angular.module('adviser.destination', [])
 	var getAllPackages= function(){
 		Package.getPackages("specialPromotions")
 		.then(function(packages){
-			$scope.firstP= packages[packages.length];
+			$scope.firstP= packages[packages.length-4];
 			$scope.secondP= packages[packages.length-1];
 			$scope.thirdP= packages[packages.length-2];
 			$scope.fourthP= packages[packages.length-3];
