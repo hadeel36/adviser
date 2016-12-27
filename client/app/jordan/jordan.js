@@ -6,6 +6,7 @@ angular.module('adviser.jordan', [])
     Jordan.getJordanInfo()
       .then(function (jordan) {
         $scope.data = jordan[0];
+        $("#dest").html(jordan[0].description);
         console.log($scope.data);
       })
       .catch(function (error) {
