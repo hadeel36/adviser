@@ -254,16 +254,16 @@ body {
 }
 .more-detail {
     padding: 10px 20px;
-    background-color: white;
+    background-color: MidnightBlue;
     font-weight: bold;
-    color: MidnightBlue;
+    color: white;
     border-radius: 0;
     transition: .2s;
     margin: 190px;
 }
 .more-detail:hover, .more-detail:focus {
-    border: 1px solid MidnightBlue;
-    background-color: MidnightBlue;
+    border: 1px solid SlateGrey;
+    background-color: SlateGrey;
     color: white;
 }
 .more-detail a{
