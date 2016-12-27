@@ -170,6 +170,10 @@ ul#cm-nav li li {
 	width: 160px;
 	height: 160px;
 }
+.view{
+  background-image: url('../images/backO.png');
+  background-attachment: fixed;
+}
 .back{
 	background-image: url('../images/back3.jpg');
 	background-attachment: fixed;
@@ -261,6 +265,10 @@ body {
     border: 1px solid MidnightBlue;
     background-color: MidnightBlue;
     color: white;
+}
+.more-detail a{
+  text-decoration: none;
+  color: white;
 } 
 .navbar {
     font-family: Montserrat, sans-serif;
@@ -429,8 +437,7 @@ footer a:hover {
    margin-bottom: 50px;
 }
 .bottomFooter{
-
-  margin-top: 50px;
+  margin-top: 0;
 }
 
 .imgslider{
@@ -460,4 +467,10 @@ footer a:hover {
   font-weight:700;
   font-family:"Times New Roman", Times, serif;
   padding:50px;
-   } 
+
+ }
+ .carousel-inner .active.left { left: -33%; }
+ .carousel-inner .next        { left:  33%; }
+ .carousel-inner .prev        { left: -33%; }
+ .carousel-control.left,.carousel-control.right {background-image:none;}
+ 

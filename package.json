@@ -8,6 +8,7 @@
     "Hadyl Khawaldeh <hadylgk87@gmail.com>"
   ],
   "scripts": {
+    "postinstall": "bower install",
     "start": "nodemon ./server/server.js",
     "lint": "jscs ./"
   },
@@ -17,6 +18,7 @@
     "clone-stats": "0.0.1"
   },
   "dependencies": {
+    "bower": "^1.5.2",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.4.3",
     "express": "^4.4.5",

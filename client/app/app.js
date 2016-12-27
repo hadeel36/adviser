@@ -13,6 +13,7 @@ angular.module('adviser', [
   'adviser.addJordanPlaceCms',
   'adviser.addDestinationCms',
   'adviser.addPackageCms',
+  'adviser.addJordanCms',
   'ngRoute',
   'ngFileUpload',
   'ui.tinymce',
@@ -74,6 +75,10 @@ angular.module('adviser', [
   .when('/cms/addPackage', {
     templateUrl: 'app/cms/addPackageCms.html',
     controller: 'addPackageCmsController'
+  })
+  .when('/cms/jordan', {
+    templateUrl: 'app/cms/addJordanCms.html',
+    controller: 'addJordanCmsController'
   })
   .when('/destinations/:destinationName/:id', {
     templateUrl: 'app/destination/destination.html',

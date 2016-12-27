@@ -19,6 +19,14 @@ angular.module('adviser.services', [])
     });
   };
 
+  var addJordanInfo = function (place) {
+    return $http({
+      method: 'POST',
+      url: '/api/jordan',
+      data: place
+    });
+  };
+
   var getPlaceInfo = function (id) {
     return $http({
       method: 'GET',
@@ -53,7 +61,8 @@ angular.module('adviser.services', [])
     addPlace : addPlace,
     getPlaceInfo : getPlaceInfo,
     uploadPicture : uploadPicture,
-    getPlaces : getPlaces  
+    getPlaces : getPlaces,
+    addJordanInfo: addJordanInfo
   };
 
 

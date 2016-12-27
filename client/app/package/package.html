@@ -6,7 +6,7 @@
             <div class="col-lg-12">
                 <h4>All Packages: 
                     <small>{{data.length}}, </small>
-                    <small>  Page: {{currentPage}}</small>
+                  <small>  Page: {{currentPage}}</small>
                 </h4>
             </div>
         </div>
@@ -15,10 +15,10 @@
         <!-- Project One -->
         <div class="row" dir-paginate="package in data | itemsPerPage: pageSize" current-page="currentPage">
         <hr>
-            <div class="col-md-4">
+            <div class="col-md-4" >
                 <a href="/#/packages/{{package.type}}/{{package._id}}">
 
-                    <img  style="width:320px; height:250px ;"  class="img-responsiv img-thumbnail" src="{{package.mainPhoto}}" alt="">
+                    <img  style="width:320px; height:250px ;"  class="img-responsiv img-thumbnail animated fadeInDown " src="{{package.mainPhoto}}" alt="">
                 </a>
             </div>
             <div class="col-md-8">
