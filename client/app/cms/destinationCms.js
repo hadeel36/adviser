@@ -4,7 +4,7 @@ angular.module('adviser.destinationCms', [])
 	$scope.data= {};
 
 	var getAllDestination= function(){
-		Destination.getAllDestination()
+		Destination.getAllDestinations()
 		.then(function(destinations){
 			$scope.data= destinations;
 		}).catch(function(error){
