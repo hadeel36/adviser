@@ -259,7 +259,7 @@ body {
     color: white;
     border-radius: 0;
     transition: .2s;
-    margin: 190px;
+    margin: 160px;
 }
 .more-detail:hover, .more-detail:focus {
     border: 1px solid SlateGrey;
