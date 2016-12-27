@@ -64,7 +64,7 @@ angular.module('adviser', [
     controller: 'destinationCmsController'
   })
   .when('/cms/addDestination', {
-    templateUrl: 'app/cms/addDestinationCms.html',
+    templateUrl: 'app/cms/AddDestinationCms.html',
     controller: 'addDestinationCmsController'
   })
   .when('/cms/packages/:type', {
