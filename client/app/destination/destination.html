@@ -25,35 +25,36 @@
 	         <div class="carousel-inner">
 	               <div class="item active">
 	                 <div class="col-lg-4 col-xs-4 col-md-4 col-sm-4" ng-repeat="pic in destinationPhotos">
-	                 	<img ng-src="{{pic}}" class="img-responsive"></div>
+	                 	<img ng-src="{{pic}}" class="img-responsive">
+	                 </div>
 	               </div>
 	         </div>
-	         <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-	         <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+	        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+	        <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+	        <script type="text/javascript">
+	        	$('#myCarousel').carousel({
+	        	  interval: 40000
+	        	});
+	        	$('.carousel .item').each(function(){
+	        	  var next = $(this).next();
+	        	  if (!next.length) {
+	        	    next = $(this).siblings(':first');
+	        	  }
+	        	  next.children(':first-child').clone().appendTo($(this));
+
+	        	  if (next.next().length>0) {
+	        	 
+	        	      next.next().children(':first-child').clone().appendTo($(this)).addClass('rightest');
+	        	      
+	        	  }
+	        	  else {
+	        	      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+	        	     
+	        	  }
+	        	});
+	        </script>
 	       </div>
 	   </div>
 </div>
 </div>
-<script type="text/javascript">
-	$('#myCarousel').carousel({
-	  interval: 40000
-	});
-	$('.carousel .item').each(function(){
-	  var next = $(this).next();
-	  if (!next.length) {
-	    next = $(this).siblings(':first');
-	  }
-	  next.children(':first-child').clone().appendTo($(this));
-
-	  if (next.next().length>0) {
-	 
-	      next.next().children(':first-child').clone().appendTo($(this)).addClass('rightest');
-	      
-	  }
-	  else {
-	      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-	     
-	  }
-	});
-</script>
 <div ng-include="'../footer.html'"></div>
