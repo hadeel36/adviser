@@ -467,17 +467,4 @@ footer a:hover {
   font-weight:700;
   font-family:"Times New Roman", Times, serif;
   padding:50px;
-<<<<<<< HEAD
-
  }
-=======
- }
- .carousel-inner .active.left { left: -33%; }
- .carousel-inner .next        { left:  33%; }
- .carousel-inner .prev        { left: -33%; }
- .carousel-control.left,.carousel-control.right {background-image:none;}
- /*.item:not(.prev) {visibility: visible;}
- .item.right:not(.prev) {visibility: hidden;}
- .rightest{ visibility: visible;}*/
- 
->>>>>>> 95a7470b66ea6d1b4a6c7e59b1be756903b32453
