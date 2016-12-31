@@ -43,6 +43,30 @@
 </div>
 <br>
 <hr class="back hr"><br>
+<div class="col-xs-12">
+        
+        <carousel interval="myInterval" >
+        <slide ng-repeat="arr in chunkedSlides" active="slide.active">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3" ng-repeat="dest in arr track by $index">
+                <div class="fff">
+                <div class="thumbnail">
+                  <a href="#"><img ng-src="{{dest.mainPhoto}}" alt=""></a>
+                </div>
+                <div class="caption">
+                  <h4>{{dest.destinationName}}</h4>
+                  <p>Nullam Condimentum Nibh Etiam Sem</p>
+                  <a class="btn btn-mini" href="#">» Read More</a>
+                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    </slide>
+                    </carousel>
+        
+</div><!-- /.col-xs-12 -->          
+
+<hr class="back hr"><br>
 <h1 align="center" class="text-primary">Popular Destinations</h1><br>
 <div class="row text-center">
   <div class="col-sm-4 col-sm-offset-2">

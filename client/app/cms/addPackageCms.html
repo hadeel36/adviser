@@ -26,8 +26,8 @@
                 <table cellpadding="0" cellspacing="0" width="1000">
                     <tbody><tr>
                         <td style="width: 245px; min-height: 500px; background-image:url('../../images/CMS-2-slice_21.png');" align="center" valign="top">
-                            <div id="ctl00_MainMenu" style="display:table"><ul id="cm-nav" class="arrow-pad"><li><a href="/#/cms/dashboard">Dashboard</a></li><li><a href="/#/cms/jordan">Jordan</a></li><li><a href="/#/cms/jordanPlaces">Jordan Places</a></li><li><a href="/#/cms/destinations">Destinations</a></li><li><a href="#" class="arrow">Tours</a><ul class="arrow-pad"><li><a href="/#/cms/packages/groups">Groups</a></li><ul></ul>
-                            <li><a href="/#/cms/packages/individuals">Individuals</a></li><ul></ul><li><a href="/#/cms/packages/guaranteedDeparture">Guaranteed Departure</a></li><ul></ul></ul></li><li><a href="/#/cms/packages/specialPromotions">Special Promotions</a></li><li><a href="/#/cms/agents">Agents</a></li><li><a href="/#/cms/pageContent">Page Content</a></li><li><a href="/#/cms/changePassword">Change Password</a></li><li><a href="#">links</a></li><li><a href="/#/cms/logout"> Logout </a></li></ul></div>
+                            <div id="ctl00_MainMenu" style="display:table"><ul id="cm-nav" class="arrow-pad"><li><a href="/#/cms/dashboard">Dashboard</a></li><li><a href="/#/cms/jordan">Jordan</a></li><li><a href="/#/cms/jordanPlaces">Jordan Places</a></li><li><a href="/#/cms/destinations">Destinations</a></li><li><a href="#" class="arrow">Tours</a><ul class="arrow-pad"><li><a href="/#/cms/packages/city-breaks">City Breaks</a></li><ul></ul>
+                            <li><a href="/#/cms/packages/jordan-tours">Jordan Tours</a></li><ul></ul><li><a href="/#/cms/packages/combined-tours">Combined Tours</a></li><ul></ul></ul></li><li><a href="/#/cms/packages/specialPromotions">Special Promotions</a></li><li><a href="/#/cms/agents">Agents</a></li><li><a href="/#/cms/pageContent">Page Content</a></li><li><a href="/#/cms/changePassword">Change Password</a></li><li><a href="#">links</a></li><li><a href="/#/cms/logout"> Logout </a></li></ul></div>
                             <div style="margin-top:20px;">
                             <img src="../../images/CMS-2-slice_23.png" width="227" height="122" alt="">
                             </div>
@@ -57,7 +57,7 @@
             <input type="text" ng-model="packageName" class="form-control"/></td>
             <td></td>
         </tr>
-        <tr>
+       <!--  <tr>
             <th valign="top">Parent Destination:</th>
             <td align="left" class="paddBot11">
             <select ng-model="parentDestination">
@@ -68,7 +68,7 @@
             </select>
             </td>
             <td></td>
-        </tr>
+        </tr> -->
         <tr>
             <th valign="top">Destination:</th>
             <td align="left" class="paddBot11">
@@ -82,9 +82,9 @@
             <th valign="top">Type:</th>
             <td align="left" class="paddBot11">
             <select  ng-model="type">
-                  <option>individuals</option>
-                  <option>groups</option>
-                  <option>guaranteedDeparture</option>
+                  <option>city-breaks</option>
+                  <option>jordan-tours</option>
+                  <option>combined-tours</option>
                   <option>specialPromotions</option>
             </select>
             </td>

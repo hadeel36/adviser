@@ -1,5 +1,5 @@
 angular.module('adviser', [
-  ,'adviser.header',
+  'adviser.header',
   'adviser.services',
   'adviser.jordan',
   'adviser.jordanPlace',

@@ -1,8 +1,17 @@
 angular.module('adviser.destination', [])
 .controller('destinationController', function($scope, Destination,$routeParams, Package){
 
-	$scope.myInterval= 3000;
+	$scope.myInterval= 6000;
+    $scope.chunkSize = 4;
 
+     function chunk(arr, size) {
+  var newArr = [];
+  var arrayLength = arr.length;
+  for (var i = 0; i < arrayLength; i += size) {
+    newArr.push(arr.slice(i, i + size));
+  }
+  return newArr;
+}
 	var getDestinationInfo= function(){
 		Destination.getDestinationInfo($routeParams.id)
 		.then(function(destinationInfo){
@@ -20,6 +29,7 @@ angular.module('adviser.destination', [])
 		Destination.getAllDestinations()
 		.then(function(destinations){
 			$scope.destinations= destinations;
+			$scope.chunkedSlides = chunk(destinations, $scope.chunkSize);
 			$scope.first= $scope.destinations[0];
 			$scope.second= $scope.destinations[1];
 			$scope.third= $scope.destinations[2];
@@ -44,4 +54,5 @@ angular.module('adviser.destination', [])
 		});
 	};
 	getAllPackages();
+ 
 });
