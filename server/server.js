@@ -6,12 +6,16 @@ var mongoose = require('mongoose');
 var autoIncrement = require('mongoose-auto-increment');
 
 var app = express();
+<<<<<<< 20415a6f72b9e7c079dd21fcda8a6f309b6e4faa
 <<<<<<< e078e75d1c9a6c6ddb1ca2d79a69acc7fe5b4ea0
 var mongoURL = process.env.MONGODB_URI || 'mongodb://localhost/adviser';
 
 
 =======
 var mongoURL = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017?ssl=true';
+=======
+var mongoURL = process.env.MONGODB_URI || 'mongodb://localhost/adviser';
+>>>>>>> faild to get data but server working
 
 var mongoOpt = {
       "server": { 
