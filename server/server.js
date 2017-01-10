@@ -9,10 +9,8 @@ var app = express();
 var mongoURL = process.env.MONGODB_URI || 'mongodb://localhost/adviser';
 
 
-
-
 // connect to mongo database named "shortly"
-var connection = mongoose.connect(mongoURL, mongoOpt);
+var connection = mongoose.connect(mongoURL);
 autoIncrement.initialize(connection);
 
 
