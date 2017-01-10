@@ -9,7 +9,7 @@
             <div class="col-md-9">
                 <!-- First Blog Post -->
                 <h2>
-                    <a href="#">{{data.packageName}}</a>
+                    <a href="#" ng-model="DestName">{{data.packageName}}</a>
                 </h2>
                 <hr>
 <div id="slides_control">
@@ -61,7 +61,7 @@
                 <br/>
                 <!-- Blog Categories Well -->
                 <div class="well bg-info">
-                           From <h2><span class="text-info">{{data.price}}$</span></h2>
+                           From <h2><span class="text-info" ng-model="price">{{data.price}}$</span></h2>
                 </div>
 
                 <!-- Side Widget Well -->
@@ -76,7 +76,7 @@
 
 </div>
 
-
+<<button type="button" class="btn btn-primary" ng-click="sendMail()">send email</button>
 
 
  <div  ng-include="'../footer.html'">                    

@@ -142,6 +142,14 @@ angular.module('adviser.services', [])
     .then(function (resp) {
       return resp.data;
     });
+
+    // var sendMail= function(data){
+    //   return $http({
+    //     method: 'POST',
+    //     url: '/api/send_Mail',
+    //     data: data
+    //   });
+    // };
   }
 
   return {
