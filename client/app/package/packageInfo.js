@@ -172,6 +172,7 @@ angular.module('adviser.packageInfo', [])
 		})
 
 	}
+
 	$scope.toastPosition = {
 	          bottom: false,
 	          top: true,
