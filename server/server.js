@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var autoIncrement = require('mongoose-auto-increment');
 
 var app = express();
-var mongoURL = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017?ssl=true';
+var mongoURL = process.env.MONGODB_URI || 'mongodb://localhost/adviser';
 
 var mongoOpt = {
       "server": { 
