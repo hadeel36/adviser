@@ -115,7 +115,8 @@
 <hr style="height: 5px; display: block;position: relative;top: -46px margin-top:10px;" class="back">
 <h2 align="center" class="text-primary">Combined Tours</h2><br>
 <div class="col-xs-12 combinedDiv back">  
-        <carousel  class="jCar">
+
+        <carousel style="margin-top: 60px">
         <slide ng-repeat="arr in chunkedSlides1" active="slide.active">
                     <ul class="thumbnails jordanUl">
                         <li class="col-sm-3 jordanLi" ng-repeat="package in arr track by $index">
@@ -125,7 +126,6 @@
        <strong class="ribbon-content">{{package.packageName}} | {{package.price}}$</strong>
     </h1>
 
-  
                         </li>
                     </ul>
                     </slide>
