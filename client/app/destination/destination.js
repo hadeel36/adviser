@@ -1,17 +1,22 @@
 angular.module('adviser.destination', [])
 .controller('destinationController', function($scope, Destination,$routeParams, Package){
 
-	$scope.myInterval= 6000;
+	$scope.myInterval= 10000;
     $scope.chunkSize = 4;
 
-     function chunk(arr, size) {
-  var newArr = [];
-  var arrayLength = arr.length;
-  for (var i = 0; i < arrayLength; i += size) {
-    newArr.push(arr.slice(i, i + size));
-  }
-  return newArr;
-}
+	function chunk(arr, size) {
+	  var newArr = [];
+	  var arrayLength = arr.length;
+	  for (var i = 0; i < arrayLength; i += size) {
+	    newArr.push(arr.slice(i, i + size));
+	  }
+	  return newArr;
+	}
+
+	function getWords(str) {
+	    return str.split(/\s+/).slice(0,10).join(" ");
+	}
+	
 	var getDestinationInfo= function(){
 		Destination.getDestinationInfo($routeParams.id)
 		.then(function(destinationInfo){
@@ -25,34 +30,45 @@ angular.module('adviser.destination', [])
 	};
 	getDestinationInfo();
 
-	var getAllDestinations= function(){
-		Destination.getAllDestinations()
-		.then(function(destinations){
-			$scope.destinations= destinations;
-			$scope.chunkedSlides = chunk(destinations, $scope.chunkSize);
-			$scope.first= $scope.destinations[0];
-			$scope.second= $scope.destinations[1];
-			$scope.third= $scope.destinations[2];
-			$scope.fourth= $scope.destinations[3];
-			$scope.photos= destinations.photos;
+	var getCityBreaks= function(){
+		Package.getPackages("city-breaks")
+		.then(function(packages){
+			$scope.cityBreaks= packages;
+			$scope.first= packages[0];
+			$scope.second= packages[1];
+			$scope.third= packages[2];
+			$scope.fourth= packages[3];
 		}).catch(function(error){
 			throw error;
 			console.log(error);
 		});
 	};
-	getAllDestinations();
+	getCityBreaks();
 
-	var getAllPackages= function(){
-		Package.getPackages("specialPromotions")
+	var getJordanTours= function(){
+		Package.getPackages("jordan-tours")
 		.then(function(packages){
-			$scope.firstP= packages[packages.length-4];
-			$scope.secondP= packages[packages.length-1];
-			$scope.thirdP= packages[packages.length-2];
-			$scope.fourthP= packages[packages.length-3];
+			for (var i=0; i<packages.length; i++){
+				packages[i].outline= getWords(packages[i].outline)
+			}
+			$scope.chunkedSlides = chunk(packages, $scope.chunkSize);
 		}).catch(function(error){
-			alert("an error eccured");
+			throw error;
+			console.log(error);
 		});
 	};
-	getAllPackages();
+	getJordanTours();
+
+	var getCombinedTours= function(){
+		Package.getPackages("combined-tours")
+		.then(function(packages){
+			$scope.combinedTours= packages;
+			$scope.chunkedSlides1 = chunk(packages, $scope.chunkSize);
+		}).catch(function(error){
+			throw error;
+			console.log(error);
+		});
+	};
+	getCombinedTours();
  
 });

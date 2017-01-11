@@ -142,12 +142,22 @@ angular.module('adviser.services', [])
     .then(function (resp) {
       return resp.data;
     });
-  }
+  };
+
+  var addEnquiry = function (enquiry) {
+    console.log('services');
+    return $http({
+      method: 'POST',
+      url: '/api/package/addEnquiry',
+      data: enquiry
+    });
+  };
 
   return {
     getPackages: getPackages,
     addNewPackage: addNewPackage,
-    getPackage: getPackage
+    getPackage: getPackage,
+    addEnquiry : addEnquiry
   };
 
 

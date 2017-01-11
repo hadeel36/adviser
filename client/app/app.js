@@ -44,6 +44,10 @@ angular.module('adviser', [
     templateUrl: 'app/package/packageInfo.html',
     controller: 'packageInfoController'
   })
+  .when('/packages/enquiry/:name/:id', {
+    templateUrl: 'app/package/enquiry.html',
+    controller: 'packageInfoController'
+  })
   .when('/cms', {
       templateUrl: 'app/cms/login.html',
       controller: 'cmsController'

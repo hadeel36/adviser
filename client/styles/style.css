@@ -327,6 +327,7 @@ footer a:hover {
     height: 5px;
     float: left;
     border: none;
+    margin-bottom:0px;
 }
 .overlay {
   position: absolute;
@@ -382,11 +383,11 @@ footer a:hover {
 .ribbon {
  font-size: 16px !important;
  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
-  width: 102%; 
+  width: 108%; 
  position: relative;
  /*background: #ba89b6;*/
  background-image: url('../images/back3.jpg');
- color: #fff;
+ color: #000;
  text-align: center;
  top: -110px;
  left: -15px;
@@ -468,3 +469,49 @@ footer a:hover {
   font-family:"Times New Roman", Times, serif;
   padding:50px;
  }
+
+ /*jordan tours in mainpage css*/
+
+.jordanImg { height:300px}
+
+
+.jordanDiv{
+    border-top:10px;
+    margin-bottom:30px;
+    padding-bottom: 20px; 
+
+    /*background:#c4e17f;*/
+    /*background-image:-webkit-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:-moz-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:-o-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:linear-gradient(to right,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4)*/
+}
+
+.jordanLi> .fff .caption { 
+    background:#fff !important; 
+    padding:10px
+}
+
+ul.jordanUl { 
+    margin-bottom: 20px;
+}
+
+
+
+/*/* Thumbnail Box */
+.jordanH {
+    color: #444;
+}
+
+
+.jordanLi{ list-style-type:none;}
+.jordanCar{margin-top:5px; margin-bottom:10px;}
+.jCar{margin-top:5px; margin-bottom:10px; padding-bottom:5px; height:300px}
+.combinedDiv{
+    border-top:10px;
+    margin-bottom:90px;
+    padding-bottom:10px; 
+  
+}
+
+/*enquiry css*/
+.enquiry .well{
+  background: #ffe6f2;
+}

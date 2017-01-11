@@ -25,7 +25,20 @@ module.exports = {
 			fourStarHotels: package.fourStarHotels,
 			fiveStarHotels: package.fiveStarHotels,
 			startAvailableDate: package.startAvailableDate,
-			endAvailableDate: package.endAvailableDate
+			endAvailableDate: package.endAvailableDate,
+			childPrice: package.childPrice,
+			sglthree: package.sglthree,
+			sglfour: package.sglfour,
+			sglfourb: package.sglfourb,
+			sglfive: package.sglfive,
+			dblthree: package.dblthree,
+			dblfour: package.dblfour,
+			dblfourb: package.dblfourb,
+			dblfive: package.dblfive,
+			trblthree: package.trblthree,
+			trblfour: package.trblfour,
+			trblfourb: package.trblfourb,
+			trblfive: package.trblfive
 		});
 		newPackage.save(function (err, package) {
 			repsonseHandler(err, req, res, {status: 201, returnObj: package}, next);

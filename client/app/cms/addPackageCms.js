@@ -25,6 +25,19 @@ angular.module('adviser.addPackageCms', [])
 		package.endAvailableDate= $scope.endDate;
 		package.mainPhoto= $scope.mainfile;
 		package.photos= photos;
+		package.childPrice= $scope.childrenPrice;
+		package.sglthree= $scope.sglthree;
+		package.sglfour= $scope.sglfour;
+		package.sglfourb= $scope.sglfourb;
+		package.sglfive= $scope.sglfive;
+		package.dblthree= $scope.dblthree;
+		package.dblfour= $scope.dblfour;
+		package.dblfourb= $scope.dblfourb;
+		package.dblfive= $scope.dblfive;
+		package.trblthree= $scope.trblthree;
+		package.trblfour= $scope.trblfour;
+		package.trblfourb= $scope.trblfourb;
+		package.trblfive= $scope.trblfive;
 		Package.addNewPackage(package)
 		.then(function(package){
 			console.log(package);
