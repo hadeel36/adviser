@@ -173,7 +173,7 @@ angular.module('adviser.packageInfo', [])
 		})
 
 	}
-=======
+
 	$scope.toastPosition = {
 	          bottom: false,
 	          top: true,
@@ -215,5 +215,5 @@ angular.module('adviser.packageInfo', [])
            });
 
 	};
->>>>>>> convert to https -not working-
+
 });
