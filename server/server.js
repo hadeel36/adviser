@@ -11,6 +11,7 @@ var app = express();
 var mongoURL = process.env.MONGODB_URI || 'mongodb://localhost/adviser';
 
 
+<<<<<<< 91169b8f1c8f7371e7813eddf639bd934c8e4504
 =======
 var mongoURL = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017?ssl=true';
 =======
@@ -25,8 +26,10 @@ var mongoOpt = {
       }
     }
 >>>>>>> fix conflict
+=======
+>>>>>>> the server working
 // connect to mongo database named "shortly"
-var connection = mongoose.connect(mongoURL, mongoOpt);
+var connection = mongoose.connect(mongoURL);
 autoIncrement.initialize(connection);
 
 
@@ -34,24 +37,26 @@ autoIncrement.initialize(connection);
 require('./config/middleware.js')(app, express);
 require('./config/routes.js')(app, express);
 
+<<<<<<< 91169b8f1c8f7371e7813eddf639bd934c8e4504
 <<<<<<< e078e75d1c9a6c6ddb1ca2d79a69acc7fe5b4ea0
 
 
 =======
 var sslkey = fs.readFileSync('./key.pem');
 var sslcert = fs.readFileSync('./cert.pem')
+=======
+>>>>>>> the server working
 
-var options = {
-    key: sslkey,
-    cert: sslcert
-};
 
+<<<<<<< 91169b8f1c8f7371e7813eddf639bd934c8e4504
 https.createServer(options, app).listen(process.env.PORT || 8000);
 console.log("server start at http://127.0.0.1:8000/");
 >>>>>>> fix conflict
+=======
+>>>>>>> the server working
 // start listening to requests on port 8000
-// app.listen(process.env.PORT || 8000);
-// console.log("server start at http://127.0.0.1:8000/")
+app.listen(process.env.PORT || 8000);
+console.log("server start at http://127.0.0.1:8000/")
 
 // export our app for testing and flexibility, required by index.js
 module.exports = app;
