@@ -214,4 +214,5 @@ angular.module('adviser.packageInfo', [])
            });
 
 	};
+
 });
