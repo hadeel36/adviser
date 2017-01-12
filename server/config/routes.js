@@ -28,6 +28,8 @@ app.get('/api/destination', destinationController.getAllDestination);
 app.get('/api/destination/destinationInfo/:id', destinationController.destinationInfo)
 // upload an image 
 app.post('/api/upload',utils.uploadImg);
+// send mail
+app.post('/api/send_Mail',utils.sendMail);
   // If a request is sent somewhere other than the routes above,
   // send it through our custom error handler
 app.use(helpers.errorLogger);
