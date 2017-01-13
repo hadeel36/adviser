@@ -96,7 +96,6 @@ angular.module('adviser.packageInfo', [])
 			$scope.sgl=$scope.data.sglfive;
 			$scope.dbl= $scope.data.dblfive;
 			$scope.trbl= $scope.data.trblfive;
-
 		}
 		$scope.hotel = hotel;
 	}
@@ -205,7 +204,6 @@ angular.module('adviser.packageInfo', [])
                        .position($scope.getToastPosition())
                        .hideDelay(5000)
                );
-
            }).
            error(function(data, status, headers, config) {
                // called asynchronously if an error occurs
