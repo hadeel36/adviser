@@ -171,7 +171,7 @@ ul#cm-nav li li {
 	height: 160px;
 }
 .view{
-  background-image: url('../images/backO.png');
+  background-image: url('../images/backO.jpg');
   background-attachment: fixed;
 }
 .back{
@@ -520,6 +520,13 @@ ul.jordanUl {
 .enquiry .well{
   background: #ffe6f2;
 }
-.content{
+.combinMargin{
+  margin-top:10px
+}
+@media only screen and (max-width: 500px){
+  .combineMargin{
+    margin-top:1040px;
+  }
+}.content{
   position:relative ;
 }
