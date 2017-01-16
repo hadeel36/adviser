@@ -547,7 +547,8 @@ ul.jordanUl {
   .combineMargin{
     margin-top:1040px;
   }
-}.content{
+}
+.content{
   position:relative ;
 }
 @media only screen and (max-width: 500px){
