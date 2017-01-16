@@ -94,7 +94,7 @@ angular.module('adviser', [
     controller: 'aboutUsController'
   })
   .when('/contactUs', {
-    templateUrl: 'app/contactUS/contactUs.html'
+    templateUrl: 'app/contactUs/contactUs.html'
   })
   .when('/home', {
     templateUrl: 'app/main/main.html',
