@@ -96,7 +96,6 @@ angular.module('adviser.packageInfo', [])
 			$scope.sgl=$scope.data.sglfive;
 			$scope.dbl= $scope.data.dblfive;
 			$scope.trbl= $scope.data.trblfive;
-
 		}
 		$scope.hotel = hotel;
 	}
@@ -205,7 +204,10 @@ angular.module('adviser.packageInfo', [])
                        .position($scope.getToastPosition())
                        .hideDelay(5000)
                );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5f1a08798ca3ad4e0b720e5b2eac9986bc8f47e8
            }).
            error(function(data, status, headers, config) {
                // called asynchronously if an error occurs
@@ -213,5 +215,8 @@ angular.module('adviser.packageInfo', [])
            });
 
 	};
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5f1a08798ca3ad4e0b720e5b2eac9986bc8f47e8
 });
