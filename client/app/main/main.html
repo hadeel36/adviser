@@ -1,8 +1,8 @@
 <div ng-include="'../header.html'">                    
 </div>
-<div id="myCarousel" class="carousel slide main-div edag" data-ride="carousel">
+<div id="myCarousel" class="carousel slide main-div" data-ride="carousel">
   <!-- Indicators -->
-  <ol class="carousel-indicators"> 
+  <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -10,21 +10,28 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="../images/a1.jpg" alt="jordan" style="height: 560px; max-height: 560px">
-      <div class="carousel-caption">
-        <h3>JORDAN</h3>
-        <p>Thank you, JORDAN - A tour you won't forget.</p>
-      </div> 
-    </div>
-    <div class="item">
-      <img src="../images/d5.jpg" alt="dubi" style="height: 560px; max-height: 560px">
+      <img src="../images/madinat-jumeirah-al-qasr-exterior-01-hero.jpg" alt="jordan" style="height: 560px; max-height: 560px">
       <div class="carousel-caption">
         <h3>DUABI</h3>
         <p>Thank you, DUABI - A tour you won't forget.</p>
       </div> 
     </div>
     <div class="item">
-      <img src="../images/e5.jpg" alt="egypt" style="height: 560px; max-height: 560px">
+      <img src="../images/madinat-jumeirah-full-resort-herov2.jpg" alt="dubi" style="height: 560px; max-height: 560px">
+      <div class="carousel-caption">
+        <h3>DUABI</h3>
+        <p>Thank you, DUABI - A tour you won't forget.</p>
+      </div> 
+    </div>
+    <div class="item">
+      <img src="../images/78b53543401e7739f13e23847a30e02e.jpg" alt="egypt" style="height: 560px; max-height: 560px">
+      <div class="carousel-caption">
+        <h3>JORDAN</h3>
+        <p>Thank you, JORDAN - A tour you won't forget.</p>
+      </div> 
+    </div>
+     <div class="item">
+      <img src="../images/egyptian-cityscapes-pyramids-2400x1350-wallpaper.jpg" alt="egypt" style="height: 560px; max-height: 560px">
       <div class="carousel-caption">
         <h3>EGYPT</h3>
         <p>Thank you, EGYPT - A tour you won't forget.</p>
@@ -114,28 +121,26 @@
 
 <hr style="height: 5px; display: block;position: relative;top: -46px margin-top:10px;" class="back">
 <h2 align="center" class="text-primary">Combined Tours</h2><br>
-<div class="row">
-  <div class="combinedDiv back">  
-          <carousel  class="jCar">
-          <slide ng-repeat="arr in chunkedSlides1" active="slide.active">
-                      <ul class="thumbnails jordanUl">
-                          <li class="col-sm-3 jordanLi" ng-repeat="package in arr track by $index">
-            
-      <a href="/#/packages/combined-tours/{{package._id}}"><img src="{{package.mainPhoto}}" alt="{{package.packageName}}"  height="275px"></a>
-      <h1 class="ribbon">
-         <strong class="ribbon-content">{{package.packageName}} | {{package.price}}$</strong>
-      </h1>
-
-    
-                          </li>
-                      </ul>
-                      </slide>
-                      </carousel>
+<div class="col-xs-12 combinedDiv back">  
+        <carousel  class="jCar">
+        <slide ng-repeat="arr in chunkedSlides1" active="slide.active">
+                    <ul class="thumbnails jordanUl">
+                        <li class="col-sm-3 jordanLi" ng-repeat="package in arr track by $index">
           
-  </div><!-- /.col-xs-12 --> 
-</div>
+    <a href="/#/packages/combined-tours/{{package._id}}"><img src="{{package.mainPhoto}}" alt="{{package.packageName}}"  height="275px"></a>
+    <h1 class="ribbon">
+       <strong class="ribbon-content">{{package.packageName}} | {{package.price}}$</strong>
+    </h1>
 
-<div class="row combineMargin">
+  
+                        </li>
+                    </ul>
+                    </slide>
+                    </carousel>
+        
+</div><!-- /.col-xs-12 --> 
+
+<div class="row" style="margin-top:10px">
  <br/>
  <br/>
 </div>
