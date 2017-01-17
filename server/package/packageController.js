@@ -1,4 +1,5 @@
 var Package = require('./packageModel.js');
+var fs = require('fs');
 
 var repsonseHandler = require('../config/helpers.js').repsonseHandler;
 
@@ -68,6 +69,60 @@ module.exports = {
 		Package.find({type: req.params.type}, function (err,packages) {
 			repsonseHandler(err, req, res, {status: 201, returnObj: packages}, next);
 		});
-	}
+	},
+
+	updatePackage: function (req, res, next) {
+		var package = req.body;
+		Package.findOne({_id: req.params.id})
+		.exec(function (err, packageOne) {
+			packageOne.packageName = package.packageName;
+			packageOne.outline = package.outline;
+			packageOne.description = package.description;
+			packageOne.mainPhoto = package.mainPhoto;
+			packageOne.photos = package.photos;
+			packageOne.parentDestination = package.parentDestination;
+			packageOne.destination = package.destination;
+			packageOne.type = package.type;
+			packageOne.itinerary = package.itinerary;
+			packageOne.include = package.include;
+			packageOne.exclude = package.exclude;
+			packageOne.places = package.places;
+			packageOne.days = package.days;
+			packageOne.nights = package.nights;
+			packageOne.price = package.price;
+			packageOne.threeStarHotels = package.threeStarHotels;
+			packageOne.fourStarHotels = package.fourStarHotels;
+			packageOne.fiveStarHotels = package.fiveStarHotels;
+			packageOne.startAvailableDate = package.startAvailableDate;
+			packageOne.endAvailableDate = package.endAvailableDate;
+			packageOne.childPrice = package.childPrice;
+			packageOne.sglthree = package.sglthree;
+			packageOne.sglfour = package.sglfour;
+			packageOne.sglfourb = package.sglfourb;
+			packageOne.sglfive = package.sglfive;
+			packageOne.dblthree = package.dblthree;
+			packageOne.dblfour = package.dblfour;
+			packageOne.dblfourb = package.dblfourb;
+			packageOne.dblfive = package.dblfive;
+			packageOne.trblthree = package.trblthree;
+			packageOne.trblfour = package.trblfour;
+			packageOne.trblfourb = package.trblfourb;
+			packageOne.trblfive = package.trblfive;
+			packageOne.save(function (err, savedPackage) {
+				repsonseHandler(err, req, res, {status: 201, returnObj: savedPackage}, next);
+			});
+		});			
+	},
+
+	deleteMainPhoto: function (req, res, next) {
+		console.log(req.body)
+		    var photo = req.body.photo;
+			var array = photo.split("/");		
+		    fs.unlink("./client/uploads/"+array[3], function(err, photo) {
+				repsonseHandler(err, req, res, {status: 201, returnObj: {photo:photo}}, next);
+		    });
+
+
+    }
 
 };

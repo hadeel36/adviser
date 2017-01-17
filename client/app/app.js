@@ -76,6 +76,10 @@ angular.module('adviser', [
     templateUrl: 'app/cms/packageCms.html',
     controller: 'packageCmsController'
   })
+  .when('/cms/packages/:type/:id', {
+    templateUrl: 'app/cms/updatePackageCms.html',
+    controller: 'packageCmsController'
+  })
   .when('/cms/addPackage', {
     templateUrl: 'app/cms/addPackageCms.html',
     controller: 'addPackageCmsController'

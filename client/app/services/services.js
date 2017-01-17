@@ -145,7 +145,6 @@ angular.module('adviser.services', [])
   };
 
   var addEnquiry = function (enquiry) {
-    console.log('services');
     return $http({
       method: 'POST',
       url: '/api/package/addEnquiry',
@@ -153,11 +152,39 @@ angular.module('adviser.services', [])
     });
   };
 
+  var updatePackage = function (id, package) {
+      return $http({
+        method: 'PUT',
+        url: '/api/package/packageUpdate/' + id,
+        data: package
+      });
+    };
+
+  var deletePhoto = function (photo) {
+    console.log("service", photo)
+      return $http({
+        method: 'PUT',
+        url: '/api/package/deletePhoto',
+        data: {photo: photo}
+      });
+    };
+
+  var deletePackage = function (id) {
+      return $http({
+        method: 'DELETE',
+        url: '/api/package/deletePackage/' + id,
+      });
+    };
+
+
   return {
     getPackages: getPackages,
     addNewPackage: addNewPackage,
     getPackage: getPackage,
-    addEnquiry : addEnquiry
+    addEnquiry : addEnquiry,
+    updatePackage: updatePackage,
+    deletePhoto: deletePhoto,
+    deletePackage: deletePackage
   };
 
 

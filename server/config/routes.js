@@ -21,6 +21,9 @@ app.get('/api/package/allPackages/:type', packageController.getPackagesDependonT
 app.post('/api/package', packageController.createNewPackage);
 app.get('/api/package/packageInfo/:id', packageController.packageInfo);
 app.post('/api/package/addEnquiry', enquiryController.createNewEnquiry);
+app.put('/api/package/packageUpdate/:id', packageController.updatePackage);
+app.put('/api/package/deletePhoto', packageController.deleteMainPhoto);
+app.delete('/api/package/deletePackage/:id', packageController.deletePackage);
 
 // destination api
 app.post('/api/addDestination', destinationController.createNewDestination);
