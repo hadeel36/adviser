@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var autoIncrement = require('mongoose-auto-increment');
 
 var app = express();
-var mongoURL = process.env.MONGODB_URI || 'mongodb://localhost/adviser';
+var mongoURL = ' mongodb://heroku_m7fc1pdh:qb438tll8hk0onk9o23ghgit7s@ds053090.mlab.com:53090/heroku_m7fc1pdh' || 'mongodb://localhost/adviser';
 
 
 // connect to mongo database named "shortly"
@@ -17,8 +17,6 @@ autoIncrement.initialize(connection);
 // configure our server with all the middleware and routing
 require('./config/middleware.js')(app, express);
 require('./config/routes.js')(app, express);
-
-
 
 // start listening to requests on port 8000
 app.listen(process.env.PORT || 8000);
