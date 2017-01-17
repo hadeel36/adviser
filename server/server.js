@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var autoIncrement = require('mongoose-auto-increment');
 
 var app = express();
-var mongoURL = process.env.MONGODB_URI || 'mongodb://localhost/adviser';
+var mongoURL = 'mongodb://adviser:sarhad@ds053090.mlab.com:53090/heroku_m7fc1pdh' || 'mongodb://localhost/adviser';
 
 
 // connect to mongo database named "shortly"
