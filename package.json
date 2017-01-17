@@ -1,6 +1,9 @@
 {
   "name": "Adviser",
   "version": "1.1.0",
+  "engines": {
+      "node": "4.1.1"
+  },
   "description": "Build out MEAN stack app",
   "author": "SarHad-Company",
   "contributors": [
