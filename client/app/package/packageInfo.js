@@ -205,7 +205,6 @@ angular.module('adviser.packageInfo', [])
                        .position($scope.getToastPosition())
                        .hideDelay(5000)
                );
-
            }).
            error(function(data, status, headers, config) {
                // called asynchronously if an error occurs
@@ -213,5 +212,4 @@ angular.module('adviser.packageInfo', [])
            });
 
 	};
-
 });
