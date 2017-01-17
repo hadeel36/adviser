@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var autoIncrement = require('mongoose-auto-increment');
 
 var app = express();
-var mongoURL = ' mongodb://heroku_m7fc1pdh:qb438tll8hk0onk9o23ghgit7s@ds053090.mlab.com:53090/heroku_m7fc1pdh' || 'mongodb://localhost/adviser';
+var mongoURL = ' mongodb://heroku_m7fc1pdh:qb438tll8hk0onk9o23ghgit7s@ds053090.mlab.com:53090/heroku_m7fc1pdh' || 'mongodb://localhost:27017/adviser';
 
 
 
