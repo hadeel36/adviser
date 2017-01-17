@@ -171,7 +171,7 @@ ul#cm-nav li li {
 	height: 160px;
 }
 .view{
-  background-image: url('../images/backO.jpg');
+  background-image: url('../images/backO.png');
   background-attachment: fixed;
 }
 .back{
@@ -270,20 +270,6 @@ body {
   text-decoration: none;
   color: white;
 } 
-@media only screen and (max-width: 1000px){
-  .edag{
-    lfont-family: Montserrat, sans-serif;
-    margin-bottom: 0;
-    border: 0;
-    opacity: 0.9;
-  }
-}
-@media only screen and (max-width: 900px){
-  .navbar li a, .navbar .navbar-brand { 
-    font-size: 8px;
-    font-weight: bolder;
-}
-}
 .navbar {
     font-family: Montserrat, sans-serif;
     margin-bottom: 0;
@@ -333,7 +319,6 @@ footer a:hover {
     position: relative;
     top: 190px;
 }*/
-
 .hr{
     display: block;
     position: relative;
@@ -343,11 +328,6 @@ footer a:hover {
     float: left;
     border: none;
     margin-bottom:0px;
-}
-@media only screen and (max-width: 500px){
-  .hr{
-    top: 70px;
-  }
 }
 .overlay {
   position: absolute;
@@ -539,14 +519,6 @@ ul.jordanUl {
 /*enquiry css*/
 .enquiry .well{
   background: #ffe6f2;
-}
-.combinMargin{
-  margin-top:10px
-}
-@media only screen and (max-width: 500px){
-  .combineMargin{
-    margin-top:1040px;
-  }
 }
 .content{
   position:relative ;

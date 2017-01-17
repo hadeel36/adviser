@@ -1,6 +1,3 @@
-var nodemailer = require('nodemailer');
-// var transporter = nodemailer.createTransport();
-
 
 var multer = require('multer');
 var storage = multer.diskStorage({ 
@@ -90,6 +87,8 @@ module.exports = {
     console.log('hiiiiiiiiiiiii');
     res.json(data);
 }
+
+    }
 
 };
 
