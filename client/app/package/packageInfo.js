@@ -160,8 +160,6 @@ angular.module('adviser.packageInfo', [])
         console.log($scope.enquiry);
 		
 	}
-
-<<<<<<< 8d37585cfb1ba9576ad81bbae6b0d87ffcfb910f
 	$scope.book = function(){
 		Package.addEnquiry($scope.enquiry)
 		.then(function (enquiry){
