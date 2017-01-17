@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var autoIncrement = require('mongoose-auto-increment');
 
 var app = express();
-var mongoURL = 'mongodb://adviser:sarhad@ds053148.mongolab.com:53148/heroku_m7fc1pdh'' || 'mongodb://localhost:27017/adviser';
+var mongoURL = 'mongodb://adviser:sarhad@ds053148.mongolab.com:53148/heroku_m7fc1pdh' || 'mongodb://localhost:27017/adviser';
 // connect to mongo database named "shortly"
 var connection = mongoose.connect(mongoURL);
 autoIncrement.initialize(connection);
