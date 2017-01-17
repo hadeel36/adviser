@@ -4,7 +4,6 @@ var autoIncrement = require('mongoose-auto-increment');
 
 var app = express();
 
-
 var mongoURL = process.env.MONGODB_URI || 'mongodb://localhost:27017/adviser';
 // connect to mongo database named "shortly"
 var connection = mongoose.connect(mongoURL);
