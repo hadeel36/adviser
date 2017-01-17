@@ -142,12 +142,49 @@ angular.module('adviser.services', [])
     .then(function (resp) {
       return resp.data;
     });
-  }
+  };
+
+  var addEnquiry = function (enquiry) {
+    return $http({
+      method: 'POST',
+      url: '/api/package/addEnquiry',
+      data: enquiry
+    });
+  };
+
+  var updatePackage = function (id, package) {
+      return $http({
+        method: 'PUT',
+        url: '/api/package/packageUpdate/' + id,
+        data: package
+      });
+    };
+
+  var deletePhoto = function (photo) {
+    console.log("service", photo)
+      return $http({
+        method: 'PUT',
+        url: '/api/package/deletePhoto',
+        data: {photo: photo}
+      });
+    };
+
+  var deletePackage = function (id) {
+      return $http({
+        method: 'DELETE',
+        url: '/api/package/deletePackage/' + id,
+      });
+    };
 
   return {
     getPackages: getPackages,
     addNewPackage: addNewPackage,
-    getPackage: getPackage
+    getPackage: getPackage,
+    addEnquiry : addEnquiry,
+    updatePackage: updatePackage,
+    deletePhoto: deletePhoto,
+    deletePackage: deletePackage
+
   };
 
 

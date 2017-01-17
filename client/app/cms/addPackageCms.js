@@ -1,10 +1,15 @@
 angular.module('adviser.addPackageCms', [])
-.controller('addPackageCmsController', function($scope, $window, Package, Destination, Upload){
+.controller('addPackageCmsController', function($scope, $window, Package, Destination, Upload, $location){
 
 	var package= {};
-	var photos= [];
+	$scope.photos= [];
 
 	$scope.addPackage= function(){
+		if ($scope.packageName == undefined || $scope.destination == undefined || $scope.outline == undefined|| $scope.type == undefined|| $scope.price == undefined|| $scope.childrenPrice == undefined || $scope.mainfile == undefined || $scope.photos.length === 0 ){
+			$('#myModal').modal();
+		}
+		else{
+			console.log($scope.packageName);
 		package.packageName= $scope.packageName;
 		package.description= $scope.tinymceModel;
 		package.destination= $scope.destination;
@@ -24,15 +29,30 @@ angular.module('adviser.addPackageCms', [])
 		package.startAvailableDate= $scope.startDate;
 		package.endAvailableDate= $scope.endDate;
 		package.mainPhoto= $scope.mainfile;
-		package.photos= photos;
+		package.photos= $scope.photos;
+		package.childPrice= $scope.childrenPrice;
+		package.sglthree= $scope.sglthree;
+		package.sglfour= $scope.sglfour;
+		package.sglfourb= $scope.sglfourb;
+		package.sglfive= $scope.sglfive;
+		package.dblthree= $scope.dblthree;
+		package.dblfour= $scope.dblfour;
+		package.dblfourb= $scope.dblfourb;
+		package.dblfive= $scope.dblfive;
+		package.trblthree= $scope.trblthree;
+		package.trblfour= $scope.trblfour;
+		package.trblfourb= $scope.trblfourb;
+		package.trblfive= $scope.trblfive;
 		Package.addNewPackage(package)
 		.then(function(package){
 			console.log(package);
 			alert("package is created");
+			$location.path("cms/packages/"+package.data.type);
 		})
 		.catch(function(error){
 			alert("an error occured");
 		});
+	    };
 	};
 
 	$scope.uploadMain= function(file){
@@ -43,11 +63,15 @@ angular.module('adviser.addPackageCms', [])
 		.then(function(resp){
 			if(resp.data.error_code===0){
 				$scope.mainfile= '../../uploads/'+resp.data.file.filename;
+				$("#mainPhoto").hide();
 			}else{
 				$window.alert('An error occured!!!')
 			}
 		},function (resp) { //catch error
 			$window.alert('Error status: ' + resp.status);
+        }, function (evt) { 
+            var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+            $scope.progress = 'progress: ' + progressPercentage + '% '; // capture upload progress
         });
 	};
 
@@ -67,13 +91,17 @@ angular.module('adviser.addPackageCms', [])
         }).then(function(resp){
 					if(resp.data.error_code===0){
 						$scope.photo='../../uploads/'+resp.data.file.filename;
-                		photos.push($scope.photo);
+                		$scope.photos.push($scope.photo);
+                		$("#photos").hide();
 					}else{
 						$window.alert('An error occured!!!');
 					}
 				},function (resp) { //catch error
             		$window.alert('Error status: ' + resp.status);
-        		});
+        		}, function (evt) { 
+            var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+            $scope.progress1 = 'progress: ' + progressPercentage + '% '; // capture upload progress
+        });
 			}
 		}
 	}

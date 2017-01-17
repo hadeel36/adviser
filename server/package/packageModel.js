@@ -23,8 +23,20 @@ var packageSchema = new mongoose.Schema({
 	endAvailableDate: {type: Date, default: Date.now},
 	notes: {type: String},
 	mainPhoto: {type: String},
-	photos: [String]
-	
+	photos: [String],
+	childPrice: {type: Number},
+	sglthree: {type: Number},
+	sglfour: {type: Number},
+	sglfourb: {type: Number},
+	sglfive: {type: Number},
+	dblthree: {type: Number},
+	dblfour: {type: Number},
+	dblfourb: {type: Number},
+	dblfive: {type: Number},
+	trblthree: {type: Number},
+	trblfour: {type: Number},
+	trblfourb: {type: Number},
+	trblfive: {type: Number}
 });
 
 packageSchema.plugin(autoIncrement.plugin,{model: 'Package',startAt: 1});

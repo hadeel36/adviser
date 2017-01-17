@@ -30,8 +30,8 @@
                 <table cellpadding="0" cellspacing="0" width="1000">
                     <tbody><tr>
                         <td style="width: 245px; min-height: 500px; background-image:url('../../images/CMS-2-slice_21.png');" align="center" valign="top">
-                            <div id="ctl00_MainMenu" style="display:table"><ul id="cm-nav" class="arrow-pad"><li><a href="/#/cms/dashboard">Dashboard</a></li><li><a href="/#/cms/jordan">Jordan</a></li><li><a href="/#/cms/jordanPlaces">Jordan Places</a></li><li><a href="/#/cms/destinations">Destinations</a></li><li><a href="#" class="arrow">Tours</a><ul class="arrow-pad"><li><a href="/#/cms/packages/groups">Groups</a></li><ul></ul>
-                            <li><a href="/#/cms/packages/individuals">Individuals</a></li><ul></ul><li><a href="/#/cms/packages/guaranteedDeparture">Guaranteed Departure</a></li><ul></ul></ul></li><li><a href="/#/cms/packages/specialPromotions">Special Promotions</a></li><li><a href="/#/cms/agents">Agents</a></li><li><a href="/#/cms/pageContent">Page Content</a></li><li><a href="/#/cms/changePassword">Change Password</a></li><li><a href="#">links</a></li><li><a href="/#/cms/logout"> Logout </a></li></ul></div>
+                            <div id="ctl00_MainMenu" style="display:table"><ul id="cm-nav" class="arrow-pad"><li><a href="/#/cms/dashboard">Dashboard</a></li><li><a href="/#/cms/jordan">Jordan</a></li><li><a href="/#/cms/jordanPlaces">Jordan Places</a></li><li><a href="/#/cms/destinations">Destinations</a></li><li><a href="#" class="arrow">Tours</a><ul class="arrow-pad"><li><a href="/#/cms/packages/city-breaks">City Breaks</a></li><ul></ul>
+                            <li><a href="/#/cms/packages/jordan-tours">Jordan Tours</a></li><ul></ul><li><a href="/#/cms/packages/combined-tours">Combined Tours</a></li><ul></ul></ul></li><li><a href="/#/cms/packages/specialPromotions">Special Promotions</a></li><li><a href="/#/cms/agents">Agents</a></li><li><a href="/#/cms/pageContent">Page Content</a></li><li><a href="/#/cms/changePassword">Change Password</a></li><li><a href="#">links</a></li><li><a href="/#/cms/logout"> Logout </a></li></ul></div>
                             <div style="margin-top:20px;">
                             <img src="../../images/CMS-2-slice_23.png" width="227" height="122" alt="">
                             </div>
@@ -63,7 +63,7 @@
         <tbody><tr style="color:White;background-color:#A55129;font-weight:bold;">
             <th scope="col">Action</th><th scope="col">ID</th><th scope="col">Package Name</th><th scope="col">Destination</th><th scope="col">Outline</th><th scope="col">Status</th>
         </tr><tr ng-repeat="package in data | filter:search" style="color:#8C4510;background-color:#FFF7E7;" >
-            <td><input type="image" src="../../images/Edit.png" alt="Edit" ng-click="" style="border-width:0px;"></td><td>{{package._id}}</td><td>{{package.packageName}}</td><td>{{package.destination}}</td><td>{{package.outline}}</td><td>Active</td>
+            <td><a href="/#/cms/packages/{{package.type}}/{{package._id}}"><input type="image" src="../../images/Edit.png" alt="Edit"  style="border-width:0px;"></a></td><td>{{package._id}}</td><td>{{package.packageName}}</td><td>{{package.destination}}</td><td>{{package.outline}}</td><td>Active</td>
         </tr>
         <tr align="center" style="color:#8C4510;">
             <td colspan="6"><table border="0">

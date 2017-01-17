@@ -1,5 +1,5 @@
 angular.module('adviser', [
-  ,'adviser.header',
+  'adviser.header',
   'adviser.services',
   'adviser.jordan',
   'adviser.jordanPlace',
@@ -44,6 +44,10 @@ angular.module('adviser', [
     templateUrl: 'app/package/packageInfo.html',
     controller: 'packageInfoController'
   })
+  .when('/packages/enquiry/:name/:id', {
+    templateUrl: 'app/package/enquiry.html',
+    controller: 'packageInfoController'
+  })
   .when('/cms', {
       templateUrl: 'app/cms/login.html',
       controller: 'cmsController'
@@ -70,6 +74,10 @@ angular.module('adviser', [
   })
   .when('/cms/packages/:type', {
     templateUrl: 'app/cms/packageCms.html',
+    controller: 'packageCmsController'
+  })
+  .when('/cms/packages/:type/:id', {
+    templateUrl: 'app/cms/updatePackageCms.html',
     controller: 'packageCmsController'
   })
   .when('/cms/addPackage', {

@@ -156,11 +156,7 @@
             <td></td>
         </tr>
          <tr>
-
             <th valign="top">Child Discount*:</th>
-
-     
-
             <td align="left" class="paddBot11">
             <input type="number"  ng-model="childrenPrice"/>%</td>
             <td></td>
@@ -260,23 +256,32 @@
     ngf-max-size="0.3MB" 
     ng-change="submitMain()"
     />
-    <img style="width:100px;" ng-show="!!mainfile" ngf-thumbnail="mainfile"/><br>
+  
+    <img style="width:100px;" ng-show="!!mainfile" ngf-thumbnail="mainfile" id="mImage"/>
+    <button ng-click="deleteMainPhoto()" id="removePhoto" class="btn btn-danger btn-xs">remove</button>
+    <br>
     <i ng-show="mainfile.$error.maxSize">File too large 
     {{mainfile.size / 1000000|number:1}}MB: max 20M</i>
     <p>{{progress}}</p>
+    
 </td> <td></td></tr>
 
     <tr>
         <th>Images*:</th>
         <td valign="top">
-          <button id="photos" ngf-select="uploadFiles()" ng-model="files" ngf-multiple="true" accept="image/*">Select files</button>
-<br>Files:
-    <ul>
-        <li ng-repeat="f in photos" style="font:smaller">
-            {{f}}
-            <p>{{progress}}</p>
-        </li>
-    </ul>
+    <div class="row" style="border-width:1px; border-style:solid; margin-bottom:10px; padding-top: 5px">
+        <div ng-repeat="f in photos" style="font:smaller; float: left; margin-left:10px; margin-bottom: 30px; border-width:1px; border-style:dashed;" class="content">
+          <img style="width:100px; height: 100px;" src="{{f}}" id="pacImage" alt="photo" />
+          <button class="btn btn-xs btn-danger ff" style="position:absolute;margin-left:22px" ng-click="deletePhoto(f)" id="fi">remove</button>
+      </div>
+      <div style="font:smaller; float: left; margin-left:10px; margin-bottom: 30px; border-width:1px; border-style:dashed;" class="content">
+      <img style="width:100px; height: 100px;" src="">
+      <p>{{progress1}}</p>
+      <button class="btn btn-xs btn-info" style="position:absolute;margin-left:22px"  id="photos" ngf-select="uploadFiles()" ng-model="files" ngf-multiple="true" accept="image/*">upload</button>
+
+      </div>
+        </div>
+    
     <!-- <span class="progress" ng-show="progress1 >= 0">
         <div style="width:{{progress1}}%" ng-bind="progress1 + '%'"></div>
     </span> -->
@@ -286,9 +291,11 @@
     <tr>
         <th>&nbsp;</th>
         <td valign="top">
-            <button ng-click="addPackage()">save</button>
+            <button ng-click="updatePackageInfo()">update</button>
+            <button ng-click="deletePackage()">delete</button>
         </td>
-        <td></td>
+        <td>
+        </td>
     </tr>
     </table>
 
@@ -317,7 +324,7 @@
     
 
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="myModal1" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->

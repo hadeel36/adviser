@@ -4,6 +4,7 @@ var jordanController = require('../jordan/jordanController.js');
 var jordanPlaceController = require('../jordanPlace/jordanPlaceController.js');
 var destinationController= require('../destination/destinationController.js');
 var packageController= require('../package/packageController.js');
+var enquiryController = require('../enquiry/enquiryController.js');
 module.exports = function (app, express) {
 
 // jordan api 
@@ -19,6 +20,11 @@ app.get('/api/jordanPlace/allPlaces',jordanPlaceController.getAllPlaces);
 app.get('/api/package/allPackages/:type', packageController.getPackagesDependonType);
 app.post('/api/package', packageController.createNewPackage);
 app.get('/api/package/packageInfo/:id', packageController.packageInfo);
+app.post('/api/package/addEnquiry', enquiryController.createNewEnquiry);
+app.put('/api/package/packageUpdate/:id', packageController.updatePackage);
+app.put('/api/package/deletePhoto', packageController.deleteMainPhoto);
+app.delete('/api/package/deletePackage/:id', packageController.deletePackage);
+
 
 // destination api
 app.post('/api/addDestination', destinationController.createNewDestination);
